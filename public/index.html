@@ -368,6 +368,43 @@ a.post:hover img{transform:scale(1.03)}
 .abanico:hover .t0{transform:translate(-50%,-52%) rotate(0deg) scale(1.03)!important}
 @media (max-width:520px){.abanico .t0{width:66%!important}}
 @media (prefers-reduced-motion:reduce){.js .abanico:not(.abierto) .t0{transform:translate(-50%,-50%) rotate(-3deg)!important}}
+
+/* ===== Ventana: instalar HispanApp ===== */
+.hoja{position:fixed;inset:0;z-index:100;display:flex;align-items:flex-end;justify-content:center}
+.hoja[hidden]{display:none}
+.hoja-fondo{position:absolute;inset:0;background:rgba(5,5,8,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);animation:fundir .25s ease}
+.hoja-caja{position:relative;width:min(560px,100%);max-height:92vh;overflow:auto;background:linear-gradient(180deg,#1A1B21,#141519);border:1px solid var(--borde);border-radius:28px 28px 0 0;padding:28px 24px calc(24px + env(safe-area-inset-bottom,0px));animation:subir .35s var(--ease,ease)}
+@media (min-width:700px){.hoja{align-items:center}.hoja-caja{border-radius:28px;padding:34px}}
+@keyframes subir{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+@keyframes fundir{from{opacity:0}to{opacity:1}}
+.hoja-x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:1px solid var(--borde);background:var(--tarjeta-2);color:#fff;font-size:1.5rem;line-height:1;cursor:pointer}
+.hoja-top{display:flex;gap:14px;align-items:center;padding-right:40px}
+.hoja-top .tile{flex:0 0 52px;width:52px;height:52px;border-radius:15px}
+.hoja-top .tile img{width:28px}
+.hoja-top .eyebrow{color:var(--naranja)}
+.hoja-top h2{font-size:1.45rem;margin-top:2px}
+.hoja-lead{color:var(--suave);margin:16px 0 18px;font-size:.98rem}
+.aviso-ig{display:grid;gap:4px;background:rgba(232,82,43,.12);border:1px solid rgba(232,82,43,.45);border-radius:16px;padding:14px 16px;margin-bottom:16px;font-size:.92rem}
+.aviso-ig[hidden]{display:none}
+.aviso-ig span{color:#ffd3c5}
+.pestanas{display:flex;gap:4px;background:var(--fondo);border:1px solid var(--borde);border-radius:999px;padding:4px;margin-bottom:18px}
+.pestanas button{flex:1;border:0;background:none;color:var(--suave);font:600 .9rem Inter,system-ui,sans-serif;padding:.6em .4em;border-radius:999px;cursor:pointer}
+.pestanas button[aria-selected="true"]{background:var(--tarjeta-2);color:#fff}
+.pasos{list-style:none;display:grid;gap:10px;margin-bottom:22px}
+.pasos[hidden],.pasos-pc[hidden]{display:none}
+.pasos li{display:flex;gap:14px;align-items:flex-start;background:var(--fondo);border:1px solid var(--borde);border-radius:16px;padding:13px 16px;font-size:.95rem;line-height:1.45}
+.pasos .n{flex:0 0 28px;height:28px;border-radius:50%;background:var(--naranja);color:#fff;font-weight:800;font-size:.85rem;display:grid;place-items:center}
+.pasos b{color:#fff}
+.ico{display:inline-block;width:1.15em;height:1.15em;vertical-align:-.2em;color:var(--naranja)}
+.pasos-pc{margin-bottom:22px;color:var(--suave);font-size:.95rem}
+.pasos-pc p+p,.copiar+p{margin-top:12px}
+.copiar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px;background:var(--fondo);border:1px solid var(--borde);border-radius:16px;padding:8px 8px 8px 16px}
+.copiar code{flex:1;min-width:0;color:#fff;font:600 .92rem ui-monospace,Menlo,monospace;overflow-wrap:anywhere}
+.copiar .btn{padding:.6em 1.1em;font-size:.86rem}
+.pasos-pc .chico{font-size:.85rem;color:var(--gris)}
+.hoja-ir{width:100%}
+body.hoja-abierta{overflow:hidden}
+@media (prefers-reduced-motion:reduce){.hoja-caja,.hoja-fondo{animation:none}}
 @media (prefers-reduced-motion:reduce){.btn-naranja::after{animation:none!important}}
 </style>
 </head>
@@ -388,7 +425,7 @@ a.post:hover img{transform:scale(1.03)}
       <li><a href="#cajones">Cajones</a></li>
       <li><a href="#patreon">Patreon</a></li>
       <li><a href="#sobre">Nosotros</a></li>
-      <li><a href="https://hispanapp.hispanapercusion.com/" class="btn btn-naranja">Empezar gratis</a></li>
+      <li><a data-instalar href="https://hispanapp.hispanapercusion.com/" class="btn btn-naranja">Empezar gratis</a></li>
     </ul>
   </div>
 </nav>
@@ -405,12 +442,12 @@ a.post:hover img{transform:scale(1.03)}
       <span class="gratis">Gratis para empezar</span>
       <h1><span class="ln"><span>Tu compás</span></span> <span class="ln"><span>flamenco,</span></span> <span class="ln"><span class="naranja">en el bolsillo</span></span></h1>
       <p class="lead">Practicá los 8 ritmos base del flamenco con partitura, reloj de compás y palmas reales. Mirá el compás mientras suena y tocá encima.</p>
-      <a href="https://hispanapp.hispanapercusion.com/" class="promo" id="promo-dic">
+      <a data-instalar href="https://hispanapp.hispanapercusion.com/" class="promo" id="promo-dic">
         <span class="promo-num">−40%</span>
         <span class="promo-txt"><b>de lanzamiento</b><small id="promo-sub">Solo en diciembre</small></span>
       </a>
       <div class="acciones">
-        <a href="https://hispanapp.hispanapercusion.com/" class="btn btn-naranja btn-grande">Empezar gratis</a>
+        <a data-instalar href="https://hispanapp.hispanapercusion.com/" class="btn btn-naranja btn-grande">Empezar gratis</a>
         <a href="#funciones" class="btn btn-gris btn-grande">Ver cómo funciona</a>
       </div>
     </div>
@@ -608,6 +645,51 @@ a.post:hover img{transform:scale(1.03)}
   </div>
 </section>
 
+
+<!-- ================= INSTALAR HISPANAPP ================= -->
+<div class="hoja" id="hoja" hidden>
+  <div class="hoja-fondo" data-cerrar></div>
+  <div class="hoja-caja" role="dialog" aria-modal="true" aria-labelledby="hoja-tit">
+    <button class="hoja-x" data-cerrar aria-label="Cerrar">×</button>
+    <div class="hoja-top">
+      <span class="tile"><img src="img/logo.png" alt=""></span>
+      <div><p class="eyebrow">Gratis para empezar</p><h2 id="hoja-tit">Instalá HispanApp en tu celular</h2></div>
+    </div>
+    <p class="hoja-lead">No hace falta tienda de apps: se instala desde el navegador en un minuto y queda en tu pantalla de inicio, como cualquier app.</p>
+
+    <div class="aviso-ig" id="aviso-ig" hidden>
+      <b>Estás dentro de Instagram</b>
+      <span>Primero abrí esta página en tu navegador: tocá <b>•••</b> arriba a la derecha y elegí <b>Abrir en el navegador</b> (o «Abrir en Safari»).</span>
+    </div>
+
+    <div class="pestanas" role="tablist">
+      <button role="tab" data-p="ios">iPhone</button>
+      <button role="tab" data-p="android">Android</button>
+      <button role="tab" data-p="desktop">Computadora</button>
+    </div>
+
+    <ol class="pasos" data-panel="ios">
+      <li><span class="n">1</span><span>Tocá <b>Abrir HispanApp</b>. Tiene que abrirse en <b>Safari</b>.</span></li>
+      <li><span class="n">2</span><span>Tocá el botón <b>Compartir</b> <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5M5 12v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> de la barra de abajo.</span></li>
+      <li><span class="n">3</span><span>Bajá y elegí <b>Agregar a inicio</b> <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 8.5v7M8.5 12h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> y después <b>Agregar</b>.</span></li>
+      <li><span class="n">4</span><span>Listo: abrila desde el ícono de <b>HispanApp</b> en tu pantalla de inicio.</span></li>
+    </ol>
+    <ol class="pasos" data-panel="android" hidden>
+      <li><span class="n">1</span><span>Tocá <b>Abrir HispanApp</b>. Conviene que se abra en <b>Chrome</b>.</span></li>
+      <li><span class="n">2</span><span>Si aparece el aviso <b>Instalar app</b>, tocalo. Si no, abrí el menú <b>⋮</b> de arriba a la derecha.</span></li>
+      <li><span class="n">3</span><span>Elegí <b>Instalar app</b> o <b>Agregar a la pantalla principal</b> y confirmá.</span></li>
+      <li><span class="n">4</span><span>Listo: vas a ver el ícono de <b>HispanApp</b> con el resto de tus apps.</span></li>
+    </ol>
+    <div class="pasos-pc" data-panel="desktop" hidden>
+      <p>HispanApp está pensada para el celular, para tenerla a mano mientras tocás. Abrí este link desde tu teléfono y seguí los pasos de iPhone o Android:</p>
+      <div class="copiar"><code id="link-app">hispanapp.hispanapercusion.com</code><button class="btn btn-gris" id="btn-copiar" type="button">Copiar link</button></div>
+      <p class="chico">También la podés usar en la computadora, en Chrome o Edge, y ahí mismo instalarla desde el ícono <b>Instalar</b> de la barra de direcciones.</p>
+    </div>
+
+    <a href="https://hispanapp.hispanapercusion.com/?utm_source=web&amp;utm_medium=boton" class="btn btn-naranja btn-grande hoja-ir" id="hoja-ir" target="_blank" rel="noopener">Abrir HispanApp</a>
+  </div>
+</div>
+
 <footer>
   <div class="wrap">
     <a href="#inicio" class="marca"><span class="tile"><img src="img/logo.png" alt=""></span><b style="color:#fff">Hispana <span>Percusión</span></b></a>
@@ -727,6 +809,34 @@ document.documentElement.classList.add('js');
           img+'<h3>'+esc(p.title)+'</h3></a>';
       }).join('');
     }).catch(function(){});
+  })();
+
+  /* Ventana para instalar HispanApp */
+  (function(){
+    var hoja=document.getElementById('hoja');if(!hoja)return;
+    var ua=navigator.userAgent||'';
+    var ios=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+    var android=/Android/i.test(ua);
+    var enApp=/Instagram|FBAN|FBAV|FB_IAB|Line\/|TikTok|musical_ly|Bytedance/i.test(ua);
+    var tabs=hoja.querySelectorAll('.pestanas button'),paneles=hoja.querySelectorAll('[data-panel]');
+    function elegir(p){tabs.forEach(function(t){t.setAttribute('aria-selected',t.dataset.p===p)});paneles.forEach(function(x){x.hidden=x.dataset.panel!==p})}
+    tabs.forEach(function(t){t.addEventListener('click',function(){elegir(t.dataset.p)})});
+    var ultimo=null;
+    function abrir(e){if(e)e.preventDefault();ultimo=document.activeElement;
+      elegir(ios?'ios':android?'android':'desktop');
+      document.getElementById('aviso-ig').hidden=!enApp;
+      hoja.hidden=false;document.body.classList.add('hoja-abierta');
+      setTimeout(function(){hoja.querySelector('.hoja-x').focus()},50)}
+    function cerrar(){hoja.hidden=true;document.body.classList.remove('hoja-abierta');if(ultimo&&ultimo.focus)ultimo.focus()}
+    document.querySelectorAll('[data-instalar]').forEach(function(a){a.addEventListener('click',abrir)});
+    hoja.querySelectorAll('[data-cerrar]').forEach(function(b){b.addEventListener('click',cerrar)});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!hoja.hidden)cerrar()});
+    if(location.hash==='#instalar')abrir();
+    var bc=document.getElementById('btn-copiar');
+    bc.addEventListener('click',function(){var t='https://hispanapp.hispanapercusion.com/';
+      var ok=function(){bc.textContent='¡Copiado!';setTimeout(function(){bc.textContent='Copiar link'},2000)};
+      if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok,function(){sel()});else sel();
+      function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('link-app'));var s=getSelection();s.removeAllRanges();s.addRange(r)}});
   })();
   document.getElementById('anio').textContent=new Date().getFullYear();
 })();
