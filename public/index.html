@@ -669,13 +669,13 @@ body.hoja-abierta{overflow:hidden}
     </div>
 
     <ol class="pasos" data-panel="ios">
-      <li><span class="n">1</span><span>Tocá <b>Abrir HispanApp</b>. Tiene que abrirse en <b>Safari</b>.</span></li>
+      <li><span class="n">1</span><span>Tocá <b>Abrir HispanApp</b>: ahí te mostramos con una flecha dónde tocar. Tiene que abrirse en <b>Safari</b>.</span></li>
       <li><span class="n">2</span><span>Tocá el botón <b>Compartir</b> <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5M5 12v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> de la barra de abajo.</span></li>
       <li><span class="n">3</span><span>Bajá y elegí <b>Agregar a inicio</b> <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 8.5v7M8.5 12h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> y después <b>Agregar</b>.</span></li>
       <li><span class="n">4</span><span>Listo: abrila desde el ícono de <b>HispanApp</b> en tu pantalla de inicio.</span></li>
     </ol>
     <ol class="pasos" data-panel="android" hidden>
-      <li><span class="n">1</span><span>Tocá <b>Abrir HispanApp</b>. Conviene que se abra en <b>Chrome</b>.</span></li>
+      <li><span class="n">1</span><span>Tocá <b>Abrir HispanApp</b>: ahí aparece el botón <b>Instalar</b>. Conviene que se abra en <b>Chrome</b>.</span></li>
       <li><span class="n">2</span><span>Si aparece el aviso <b>Instalar app</b>, tocalo. Si no, abrí el menú <b>⋮</b> de arriba a la derecha.</span></li>
       <li><span class="n">3</span><span>Elegí <b>Instalar app</b> o <b>Agregar a la pantalla principal</b> y confirmá.</span></li>
       <li><span class="n">4</span><span>Listo: vas a ver el ícono de <b>HispanApp</b> con el resto de tus apps.</span></li>
@@ -686,7 +686,7 @@ body.hoja-abierta{overflow:hidden}
       <p class="chico">También la podés usar en la computadora, en Chrome o Edge, y ahí mismo instalarla desde el ícono <b>Instalar</b> de la barra de direcciones.</p>
     </div>
 
-    <a href="https://hispanapp.hispanapercusion.com/?utm_source=web&amp;utm_medium=boton" class="btn btn-naranja btn-grande hoja-ir" id="hoja-ir" target="_blank" rel="noopener">Abrir HispanApp</a>
+    <a href="https://hispanapp.hispanapercusion.com/?instalar=1&amp;utm_source=web" class="btn btn-naranja btn-grande hoja-ir" id="hoja-ir" target="_blank" rel="noopener">Abrir HispanApp</a>
   </div>
 </div>
 
@@ -822,7 +822,11 @@ document.documentElement.classList.add('js');
     function elegir(p){tabs.forEach(function(t){t.setAttribute('aria-selected',t.dataset.p===p)});paneles.forEach(function(x){x.hidden=x.dataset.panel!==p})}
     tabs.forEach(function(t){t.addEventListener('click',function(){elegir(t.dataset.p)})});
     var ultimo=null;
-    function abrir(e){if(e)e.preventDefault();ultimo=document.activeElement;
+    var APP='https://hispanapp.hispanapercusion.com/?instalar=1&utm_source=web';
+    function abrir(e){
+      /* En el celular (fuera de Instagram) va directo a la app, que muestra cómo guardarla */
+      if(e&&(ios||android)&&!enApp){e.preventDefault();location.href=APP;return}
+      if(e)e.preventDefault();ultimo=document.activeElement;
       elegir(ios?'ios':android?'android':'desktop');
       document.getElementById('aviso-ig').hidden=!enApp;
       hoja.hidden=false;document.body.classList.add('hoja-abierta');
