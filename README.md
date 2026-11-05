@@ -7,3 +7,8 @@ Página de Hispana Percusión: HispanApp, el método *Los Ritmos del Flamenco*, 
 - `patreon/worker.js` — copia del código del Worker **hispana-patreon**, que trae los últimos videos de Patreon. Ese Worker se edita en Cloudflare y usa el secreto `PATREON_TOKEN` (no va en este repositorio).
 
 Cada cambio que se une a `main` se publica solo en Cloudflare.
+
+## Cómo se publica
+
+1. Se abre un pull request con el cambio.
+2. Al hacer **Merge** a `main`, Cloudflare (Workers Builds) corre `npx wrangler deploy` y publica la carpeta `public/`.
