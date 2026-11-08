@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Los Ritmos del Flamenco · Método completo de cajón y palmas</title>
+<meta name="description" content="Aprendé a acompañar todos los palos del flamenco con cajón y palmas a partir de 8 ritmos base. 3 eBooks con partituras y videos. Garantía de 7 días.">
+<meta name="theme-color" content="#0F1013">
+<link rel="canonical" href="https://hispanapercusion.com/metodo/">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Hispana Percusión">
+<meta property="og:title" content="Los Ritmos del Flamenco · Método completo">
+<meta property="og:description" content="Todo el flamenco en 8 ritmos: 3 eBooks de cajón y palmas con partituras y videos.">
+<meta property="og:url" content="https://hispanapercusion.com/metodo/">
+<meta property="og:image" content="https://hispanapercusion.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../img/logo.png">
+<link rel="apple-touch-icon" href="../img/icono-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- PIXEL DE ANUNCIOS (Meta): pegar aquí el código cuando esté la cuenta publicitaria -->
+<style>
+/* Landing de venta del método. Mismo sistema visual que HispanApp y la web:
+   fondo negro, tarjetas grafito, naranja como único acento, Inter. Una sola acción: comprar. */
+:root{
+  --fondo:#0F1013;
+  --tarjeta:#1A1B21;
+  --tarjeta-2:#22232A;
+  --borde:#2A2B32;
+  --naranja:#E8522B;
+  --naranja-osc:#C9431F;
+  --texto:#F4F4F6;
+  --suave:#A3A2AD;
+  --gris:#7D7C88;
+  --ok:#3FBF7F;
+  --ease:cubic-bezier(.2,.75,.2,1);
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Inter",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;background:var(--fondo);color:var(--texto);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:84px}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.angosto{max-width:720px}
+section{padding-block:56px}
+h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1.08;text-wrap:balance}
+h2{font-size:clamp(1.8rem,4.4vw,2.7rem);margin:.25em 0 .5em}
+.eyebrow{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--naranja)}
+.lead{font-size:1.08rem;color:var(--suave);max-width:60ch}
+.naranja{color:var(--naranja)}
+.panel{background:radial-gradient(70% 60% at 100% 100%,rgba(232,82,43,.12),transparent 70%),linear-gradient(180deg,#1A1B21,#141519);border:1px solid var(--borde);border-radius:32px;padding:48px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;padding:1.05em 1.9em;border-radius:999px;font-weight:700;font-size:1.02rem;text-decoration:none;border:0;cursor:pointer;font-family:inherit;color:#fff;background:var(--naranja);box-shadow:0 10px 30px rgba(232,82,43,.35);transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px);background:var(--naranja-osc)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--naranja);outline-offset:3px}
+.btn-ancho{width:100%}
+.seguro{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.84rem;color:var(--gris);margin-top:12px}
+.seguro span::before{content:"✓ ";color:var(--ok);font-weight:700}
+
+/* Cabecera mínima: sin menú, para no distraer */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(15,16,19,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--borde)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:41;background:var(--fondo)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:-.02em}
+.marca .tile{width:38px;height:38px;border-radius:11px;background:var(--tarjeta);border:1px solid var(--borde);display:grid;place-items:center}
+.marca .tile img{width:20px}
+.marca span{color:var(--suave);font-weight:600}
+.top .mini-btn{font-size:.86rem;font-weight:700;text-decoration:none;color:#fff;background:var(--naranja);padding:.55em 1.1em;border-radius:999px}
+
+/* Hero */
+.hero{padding-top:48px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);letter-spacing:-.035em;margin:12px 0 20px}
+.hero .lead{margin-bottom:26px}
+.tapa-hero{position:relative;background:radial-gradient(80% 70% at 50% 40%,#fff,#E7E5E0);border-radius:28px;aspect-ratio:1/1.05;overflow:hidden}
+.tapa-hero img{position:absolute;width:62%;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-3deg);border-radius:8px;box-shadow:0 34px 70px rgba(28,27,38,.45)}
+.sello{position:absolute;top:18px;right:18px;background:var(--naranja);color:#fff;font-weight:800;font-size:.8rem;letter-spacing:.06em;padding:.5em .9em;border-radius:999px;text-transform:uppercase}
+.precio-mini{display:flex;align-items:baseline;gap:12px;margin-bottom:18px}
+.precio-mini .ahora{font-size:2rem;font-weight:800;letter-spacing:-.03em}
+.precio-mini .antes{color:var(--gris);text-decoration:line-through;font-size:1.05rem}
+.precio-mini .moneda{font-size:.85rem;color:var(--suave);font-weight:600}
+.datos{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.datos span{background:var(--tarjeta);border:1px solid var(--borde);border-radius:999px;padding:.4em .9em;font-size:.84rem;color:var(--suave)}
+.datos b{color:#fff}
+
+/* Problema */
+.dolores{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.dolor{background:var(--tarjeta);border:1px solid var(--borde);border-radius:20px;padding:22px}
+.dolor p:first-child{font-weight:700;font-size:1.02rem;margin-bottom:6px}
+.dolor p+p{color:var(--suave);font-size:.94rem}
+
+/* Idea del método */
+.compases{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}
+.compas{background:var(--fondo);border:1px solid var(--borde);border-radius:20px;padding:20px;text-align:center}
+.compas b{display:block;font-size:2.4rem;font-weight:800;letter-spacing:-.04em;color:var(--naranja);line-height:1}
+.compas span{display:block;font-weight:700;margin-top:6px}
+.compas small{color:var(--gris);font-size:.82rem}
+
+/* Qué incluye */
+.volumenes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.vol{background:var(--tarjeta);border:1px solid var(--borde);border-radius:24px;overflow:hidden;display:flex;flex-direction:column}
+.vol .portada{background:radial-gradient(80% 70% at 50% 40%,#fff,#E7E5E0);padding:22px 22px 0;display:flex;justify-content:center}
+.vol .portada img{width:70%;border-radius:6px 6px 0 0;box-shadow:0 18px 40px rgba(28,27,38,.35)}
+.vol .info{padding:20px 22px 24px}
+.vol small{color:var(--naranja);font-weight:700;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase}
+.vol h3{font-size:1.18rem;margin:4px 0 6px}
+.vol p{color:var(--suave);font-size:.92rem}
+.extras{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}
+.extras li{display:flex;gap:12px;align-items:flex-start;background:var(--fondo);border:1px solid var(--borde);border-radius:18px;padding:16px 18px}
+.extras .ico{flex:0 0 36px;height:36px;border-radius:50%;background:rgba(232,82,43,.14);color:var(--naranja);display:grid;place-items:center;font-weight:800}
+.extras b{display:block}
+.extras span{color:var(--suave);font-size:.9rem}
+
+/* Para quién */
+.paraquien{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.paraquien ul{list-style:none;display:grid;gap:10px}
+.paraquien li{display:flex;gap:10px;align-items:flex-start;font-size:.98rem}
+.paraquien .si li::before{content:"✓";color:var(--ok);font-weight:800}
+.paraquien .no li::before{content:"✕";color:var(--gris);font-weight:800}
+.paraquien h3{font-size:1.05rem;margin-bottom:14px}
+.paraquien .no{color:var(--suave)}
+
+/* Autor */
+.autor-grid{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start}
+.autor-foto{width:120px;height:120px;border-radius:28px;background:var(--tarjeta-2);border:1px solid var(--borde);display:grid;place-items:center}
+.autor-foto img{width:56px}
+.autor p{color:var(--suave)}
+.autor p+p{margin-top:12px}
+.autor b{color:#fff}
+
+/* Respaldo */
+.cita{background:var(--tarjeta);border:1px solid var(--borde);border-radius:26px;padding:30px;margin-top:24px;position:relative}
+.cita::before{content:"\201C";position:absolute;top:-6px;left:22px;font-size:5rem;line-height:1;color:var(--naranja);font-weight:800}
+.cita blockquote{font-size:clamp(1.1rem,2.4vw,1.32rem);line-height:1.5;font-weight:600;letter-spacing:-.01em;padding-top:18px}
+.cita figcaption{margin-top:18px}
+.cita figcaption b{display:block}
+.cita figcaption span{color:var(--gris);font-size:.88rem}
+.cifras{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.cifras div{background:var(--fondo);border:1px solid var(--borde);border-radius:20px;padding:18px;text-align:center}
+.cifras b{display:block;font-size:1.9rem;font-weight:800;letter-spacing:-.04em;color:var(--naranja);line-height:1.1}
+.cifras span{color:var(--suave);font-size:.84rem;line-height:1.35;display:block;margin-top:4px}
+@media (max-width:600px){.cifras{grid-template-columns:1fr}}
+
+/* Precio */
+.oferta{max-width:560px;margin:0 auto;text-align:center}
+.oferta .panel{padding:40px 32px;border-color:rgba(232,82,43,.45)}
+.oferta .chip{display:inline-block;background:rgba(232,82,43,.14);color:var(--naranja);font-weight:800;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;padding:.45em 1em;border-radius:999px}
+.oferta .precio{display:flex;justify-content:center;align-items:baseline;gap:12px;margin:18px 0 4px}
+.oferta .precio .antes{color:var(--gris);text-decoration:line-through;font-size:1.3rem}
+.oferta .precio .ahora{font-size:clamp(3rem,10vw,4.2rem);font-weight:800;letter-spacing:-.05em;line-height:1}
+.oferta .ahorro{color:var(--suave);font-size:.95rem;margin-bottom:22px}
+.oferta ul{list-style:none;text-align:left;display:grid;gap:9px;margin:0 auto 26px;max-width:380px}
+.oferta li::before{content:"✓  ";color:var(--ok);font-weight:800}
+.oferta .seguro{justify-content:center}
+.garantia{display:flex;gap:16px;align-items:center;text-align:left;margin-top:22px;background:var(--fondo);border:1px solid var(--borde);border-radius:20px;padding:18px}
+.garantia .escudo{flex:0 0 54px;height:54px;border-radius:50%;border:2px solid var(--ok);color:var(--ok);display:grid;place-items:center;font-weight:800;font-size:1.15rem;line-height:1;text-align:center}
+.garantia .escudo small{display:block;font-size:.55rem;letter-spacing:.06em}
+.garantia p{font-size:.9rem;color:var(--suave)}
+.garantia b{color:#fff}
+
+.otros-idiomas{margin-top:22px;padding-top:20px;border-top:1px solid var(--borde)}
+.otros-idiomas p{font-size:.86rem;color:var(--gris);margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.chips a{text-decoration:none;font-size:.84rem;font-weight:600;color:var(--suave);background:var(--fondo);border:1px solid var(--borde);border-radius:999px;padding:.4em .9em;transition:border-color .2s,color .2s}
+.chips a:hover{border-color:var(--naranja);color:#fff}
+.faq-chips{justify-content:flex-start;padding-bottom:18px}
+
+/* FAQ */
+.faq{display:grid;gap:10px;margin-top:24px}
+.faq details{background:var(--tarjeta);border:1px solid var(--borde);border-radius:18px;padding:0 20px}
+.faq summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:700;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--naranja);font-size:1.4rem;line-height:1;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--suave);padding-bottom:18px;max-width:62ch}
+
+/* Final */
+.final{text-align:center}
+.final .lead{margin:0 auto 26px}
+footer{padding-block:32px 40px;color:var(--gris);font-size:.84rem;text-align:center}
+footer a{color:var(--suave)}
+
+/* Botón fijo en el celular */
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(15,16,19,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--borde);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));display:flex;align-items:center;gap:14px;transform:translateY(110%);transition:transform .35s var(--ease)}
+.barra.ver{transform:none}
+.barra .p{line-height:1.15}
+.barra .p b{font-size:1.25rem;letter-spacing:-.03em}
+.barra .p s{color:var(--gris);font-size:.82rem;margin-left:6px}
+.barra .p small{display:block;color:var(--gris);font-size:.74rem}
+.barra .btn{flex:1;padding:.9em 1em;font-size:.98rem}
+@media (min-width:900px){.barra{display:none}body{padding-bottom:0}}
+
+/* Aparición suave */
+.js .aparece{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .9s var(--ease)}
+.js .aparece.visto{opacity:1;transform:none}
+
+@media (max-width:900px){
+  section{padding-block:44px}
+  .panel{padding:32px 22px;border-radius:26px}
+  .hero{padding-top:28px}
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .tapa-hero{order:-1;aspect-ratio:1.25/1}
+  .tapa-hero img{width:46%}
+  .dolores,.volumenes{grid-template-columns:1fr}
+  .compases{grid-template-columns:repeat(2,1fr)}
+  .extras,.paraquien{grid-template-columns:1fr}
+  .top .mini-btn{display:none}
+  .autor-grid{grid-template-columns:1fr}
+  .autor-foto{width:84px;height:84px;border-radius:22px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.js .aparece{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="/" class="marca"><span class="tile"><img src="../img/logo.png" alt=""></span>Hispana <span>Percusión</span></a>
+    <a href="#comprar" class="mini-btn">Quiero el método</a>
+  </div>
+</header>
+
+<main>
+<!-- 1. HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Método completo · Cajón y palmas</p>
+      <h1>Todo el flamenco en <span class="naranja">8 ritmos</span></h1>
+      <p class="lead">Dejá de aprender palo por palo. Con <b style="color:#fff">Los Ritmos del Flamenco</b> entendés el compás desde la raíz y acompañás con cajón y palmas cualquier palo que lleve ritmo.</p>
+      <div class="precio-mini">
+        <span class="ahora">59,90</span><span class="moneda">USD</span><span class="antes">99,90</span>
+      </div>
+      <a href="#comprar" class="btn">Quiero el método completo</a>
+      <div class="seguro"><span>Garantía de 7 días</span><span>Acceso inmediato</span><span>Pago seguro</span></div>
+      <div class="datos">
+        <span><b>3</b> eBooks</span><span><b>158</b> páginas</span><span>Partituras y <b>videos</b></span><span>7 idiomas</span>
+      </div>
+    </div>
+    <div class="tapa-hero">
+      <span class="sello">−40%</span>
+      <img src="../img/tapa-metodo.webp" alt="Tapa de Los Ritmos del Flamenco, método completo" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<!-- 2. EL PROBLEMA -->
+<section>
+  <div class="wrap aparece">
+    <p class="eyebrow">¿Te pasa esto?</p>
+    <h2>El compás flamenco parece una barrera</h2>
+    <div class="dolores">
+      <div class="dolor"><p>Hay demasiados palos</p><p>Soleá, alegrías, bulerías, seguiriyas, tangos… y no sabés por dónde empezar.</p></div>
+      <div class="dolor"><p>El compás de 12 te pierde</p><p>Contás, te equivocás de acento y en el tiempo 10 ya no sabés dónde estás.</p></div>
+      <div class="dolor"><p>Aprendés de memoria</p><p>Copiás patrones de videos sueltos, pero no entendés por qué funcionan ni cómo variarlos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. LA IDEA DEL MÉTODO -->
+<section>
+  <div class="wrap">
+    <div class="panel aparece">
+      <p class="eyebrow">La idea del método</p>
+      <h2>Un mismo ritmo, <span class="naranja">muchos palos</span></h2>
+      <p class="lead">En el flamenco, lo que define al palo es el cante, no el ritmo: con un mismo ritmo se acompañan varios palos distintos. Por eso el método ordena el flamenco por ritmos. Son 8, y con ellos acompañás todos los palos que llevan acompañamiento rítmico.</p>
+      <div class="compases">
+        <div class="compas"><b>2</b><span>en 12 tiempos</span><small>Soleá por bulerías, alegrías, seguiriyas</small></div>
+        <div class="compas"><b>3</b><span>en 3/4</span><small>Bulerías, sevillanas, fandangos, abandolaos</small></div>
+        <div class="compas"><b>2</b><span>en 4/4</span><small>Tangos, rumbas, tientos</small></div>
+        <div class="compas"><b>1</b><span>en 6/8</span><small>Tanguillos</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. QUÉ INCLUYE -->
+<section>
+  <div class="wrap">
+    <div class="aparece">
+      <p class="eyebrow">Qué incluye</p>
+      <h2>3 eBooks, de lo más simple a lo más completo</h2>
+    </div>
+    <div class="volumenes aparece">
+      <article class="vol">
+        <div class="portada"><img src="../img/tapa-1.webp" alt="Tapa del eBook I" loading="lazy"></div>
+        <div class="info"><small>eBook I · Compás de 12 tiempos</small><h3>Soleá por bulerías, alegrías y seguiriyas</h3><p>Cuentas, esqueletos, bases, corte al 3, cierre al 10 y variaciones de graves y agudos.</p></div>
+      </article>
+      <article class="vol">
+        <div class="portada"><img src="../img/tapa-2.webp" alt="Tapa del eBook II" loading="lazy"></div>
+        <div class="info"><small>eBook II · Ritmos en 3/4</small><h3>Bulerías, sevillanas, fandangos y abandolaos</h3><p>El concepto de Cádiz y el de Sevilla, contrapalmas, patrones y arreglos típicos.</p></div>
+      </article>
+      <article class="vol">
+        <div class="portada"><img src="../img/tapa-3.webp" alt="Tapa del eBook III" loading="lazy"></div>
+        <div class="info"><small>eBook III · Ritmos en 4/4 y 6/8</small><h3>Tangos, rumbas, tientos y tanguillos</h3><p>Contrapalmas, corte típico de tangos, variaciones, patrones latinos y arreglo de tanguillos.</p></div>
+      </article>
+    </div>
+    <ul class="extras aparece">
+      <li><span class="ico">♩</span><span><b>Partitura en cada ejercicio</b><span>De palmas y de cajón, con la cuenta de cada compás.</span></span></li>
+      <li><span class="ico">▶</span><span><b>Videos de demostración</b><span>Cada ejercicio tiene su video, con enlace directo desde el eBook.</span></span></li>
+      <li><span class="ico">↗</span><span><b>Progresivo</b><span>De los ejercicios básicos a las variaciones, ritmo por ritmo.</span></span></li>
+      <li><span class="ico">⌁</span><span><b>Palmas y cajón</b><span>Los dos instrumentos del acompañamiento flamenco, en el mismo método.</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 5. PARA QUIÉN ES -->
+<section>
+  <div class="wrap">
+    <div class="panel aparece">
+      <p class="eyebrow">¿Es para vos?</p>
+      <h2>Para quién es este método</h2>
+      <div class="paraquien">
+        <div class="si">
+          <h3>Es para vos si…</h3>
+          <ul>
+            <li>Tocás cajón o percusión y querés entrar al flamenco con bases sólidas.</li>
+            <li>Bailás o cantás y querés entender el compás que te acompaña.</li>
+            <li>Ya tocás algo de flamenco pero aprendiste de oído y te faltan las bases.</li>
+            <li>Das clases y buscás material ordenado para tus alumnos.</li>
+          </ul>
+        </div>
+        <div class="no">
+          <h3>No es para vos si…</h3>
+          <ul>
+            <li>Buscás un truco para tocar un solo palo en un día, sin practicar.</li>
+            <li>Preferís un curso en vivo con horario fijo.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. AUTOR -->
+<section>
+  <div class="wrap angosto aparece">
+    <p class="eyebrow">Quién lo enseña</p>
+    <h2>Jordan Migues</h2>
+    <div class="autor-grid autor">
+      <div class="autor-foto"><!-- Reemplazar por una foto de Jordan --><img src="../img/logo.png" alt=""></div>
+      <div>
+        <p>Músico y percusionista especializado en flamenco, creador de <b>Hispana Percusión</b>. Desarrolla su carrera en Buenos Aires desde 2014 y compartió escenario con figuras como <b>Antonio Canales</b>, <b>Paloma Fantova</b>, <b>El Canijo de Jerez</b> y <b>Soraya Clavijo</b>.</p>
+        <p>Se formó con Israel Suárez «Piraña», Ramón Suárez «Porrina», Pedrito Martínez, Nico Arnicho y David Morán «El Gamba de Jerez». Este método reúne cómo enseña el flamenco: <b>bien explicado, accesible para todos</b>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. RESPALDO — cita real del prólogo del eBook I. Testimonios de alumnos: sumar acá cuando estén (reales y con permiso) -->
+<section>
+  <div class="wrap angosto aparece">
+    <p class="eyebrow">Respaldo</p>
+    <h2>Lo que dicen del método</h2>
+    <figure class="cita">
+      <blockquote>«Jordan Migues ha sido uno de los más notables intérpretes del cajón flamenco en Latinoamérica […] Jordan es el primo hermano que necesitas para iniciarte en el flamenco.»</blockquote>
+      <figcaption><b>Paolo De Gregorio</b><span>Músico, luthier y escritor de «El Mundo del Cajón». Del prólogo de Los Ritmos del Flamenco.</span></figcaption>
+    </figure>
+    <div class="cifras">
+      <div><b>+2 M</b><span>de reproducciones en redes en el último mes</span></div>
+      <div><b>+10 años</b><span>en los escenarios flamencos de Buenos Aires</span></div>
+      <div><b>7</b><span>idiomas en los que está el método</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. OFERTA -->
+<section id="comprar">
+  <div class="wrap oferta aparece">
+    <div class="panel">
+      <span class="chip">Precio especial</span>
+      <h2 style="margin-top:14px">Los Ritmos del Flamenco<br><span class="naranja">Método completo</span></h2>
+      <div class="precio"><span class="antes">99,90</span><span class="ahora">59,90</span></div>
+      <p class="ahorro">USD · pago único · ahorrás 40 USD</p>
+      <ul>
+        <li>eBook I: compás de 12 tiempos</li>
+        <li>eBook II: ritmos en 3/4</li>
+        <li>eBook III: ritmos en 4/4 y 6/8</li>
+        <li>Partituras de palmas y cajón</li>
+        <li>Videos de demostración de cada ejercicio</li>
+      </ul>
+      <a href="https://hispanapercusion.lemonsqueezy.com/checkout/buy/b631cc57-af72-4282-96b8-9967cb562df1" class="btn btn-ancho" id="btn-comprar" target="_blank" rel="noopener">Comprar ahora por 59,90 USD</a>
+      <div class="seguro"><span>Acceso inmediato por email</span><span>Pago seguro</span></div>
+      <div class="garantia">
+        <span class="escudo">7<small>DÍAS</small></span>
+        <p><b>Garantía de 7 días.</b> Si el método no es para vos, escribinos dentro de los 7 días de la compra y te devolvemos el dinero.</p>
+      </div>
+
+      <div class="otros-idiomas">
+        <p>¿Preferís otro idioma?</p>
+        <div class="chips"><a href="https://hispanapercusion.lemonsqueezy.com/checkout/buy/9deded9a-4641-48af-9c28-a60586d2d536" hreflang="en" lang="en" target="_blank" rel="noopener">English</a><a href="https://hispanapercusion.lemonsqueezy.com/checkout/buy/1d344c18-0f1e-465f-8356-dbb52947b48e" hreflang="pt" lang="pt" target="_blank" rel="noopener">Português</a><a href="https://hispanapercusion.lemonsqueezy.com/checkout/buy/6286ab38-0264-4e34-946d-0169d5d8c949" hreflang="de" lang="de" target="_blank" rel="noopener">Deutsch</a><a href="https://hispanapercusion.lemonsqueezy.com/checkout/buy/656a0c48-bec0-455f-b434-948307dd39d9" hreflang="fr" lang="fr" target="_blank" rel="noopener">Français</a><a href="https://hispanapercusion.lemonsqueezy.com/checkout/buy/59967281-4dc7-47f9-8eec-f782cf662789" hreflang="ru" lang="ru" target="_blank" rel="noopener">Русский</a><a href="https://hispanapercusion.lemonsqueezy.com/checkout/buy/d43f9015-ad74-4346-88cc-022d5fb57d3e" hreflang="zh" lang="zh" target="_blank" rel="noopener">中文</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. PREGUNTAS FRECUENTES -->
+<section>
+  <div class="wrap angosto aparece">
+    <p class="eyebrow">Preguntas frecuentes</p>
+    <h2>Antes de comprar</h2>
+    <div class="faq">
+      <details><summary>¿En qué formato llega?</summary><p>Son 3 eBooks en PDF. Después del pago te llega un email con el acceso para descargarlos, y los podés leer en el celular, la tablet o la computadora.</p></details>
+      <details><summary>¿Dónde están los videos?</summary><p>Cada ejercicio tiene un enlace dentro del eBook que abre el video de demostración. Leés la partitura y escuchás cómo suena.</p></details>
+      <details><summary>¿Tengo que saber leer partitura?</summary><p>El método está pensado para empezar desde el punto de vista rítmico: cada ejercicio tiene su partitura, la cuenta del compás y su video, así que podés seguirlo aunque estés empezando a leer.</p></details>
+      <details><summary>¿Necesito un cajón?</summary><p>Para la parte de cajón, sí. La parte de palmas la podés practicar solo con tus manos.</p></details>
+      <details><summary>¿Cómo funciona la garantía?</summary><p>Si dentro de los 7 días de la compra sentís que no es para vos, escribinos a info@hispanapercusion.com y te devolvemos el dinero.</p></details>
+      <details><summary>¿Está en otros idiomas?</summary><p>Sí. Además del español, el método está en inglés, portugués, alemán, francés, ruso y chino. Elegí tu idioma acá:</p><div class="chips faq-chips"><a href="https://hispanapercusion.lemonsqueezy.com/checkout/buy/9deded9a-4641-48af-9c28-a60586d2d536" hreflang="en" lang="en" target="_blank" rel="noopener">English</a><a href="https://hispanapercusion.lemonsqueezy.com/checkout/buy/1d344c18-0f1e-465f-8356-dbb52947b48e" hreflang="pt" lang="pt" target="_blank" rel="noopener">Português</a><a href="https://hispanapercusion.lemonsqueezy.com/checkout/buy/6286ab38-0264-4e34-946d-0169d5d8c949" hreflang="de" lang="de" target="_blank" rel="noopener">Deutsch</a><a href="https://hispanapercusion.lemonsqueezy.com/checkout/buy/656a0c48-bec0-455f-b434-948307dd39d9" hreflang="fr" lang="fr" target="_blank" rel="noopener">Français</a><a href="https://hispanapercusion.lemonsqueezy.com/checkout/buy/59967281-4dc7-47f9-8eec-f782cf662789" hreflang="ru" lang="ru" target="_blank" rel="noopener">Русский</a><a href="https://hispanapercusion.lemonsqueezy.com/checkout/buy/d43f9015-ad74-4346-88cc-022d5fb57d3e" hreflang="zh" lang="zh" target="_blank" rel="noopener">中文</a></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- 10. CIERRE -->
+<section class="final">
+  <div class="wrap angosto aparece">
+    <h2>Empezá hoy con el <span class="naranja">compás</span></h2>
+    <p class="lead">Los 8 ritmos que sostienen todo el flamenco, explicados paso a paso, con partituras y videos.</p>
+    <a href="#comprar" class="btn">Quiero el método por 59,90 USD</a>
+    <div class="seguro" style="justify-content:center"><span>Garantía de 7 días</span><span>Acceso inmediato</span></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© <span id="anio"></span> Hispana Percusión · <a href="/">hispanapercusion.com</a> · <a href="mailto:info@hispanapercusion.com">info@hispanapercusion.com</a></p>
+  </div>
+</footer>
+
+<!-- Botón fijo de compra en el celular -->
+<div class="barra" id="barra" aria-hidden="true">
+  <div class="p"><b>59,90</b><s>99,90</s><small>USD · garantía de 7 días</small></div>
+  <a href="#comprar" class="btn" tabindex="-1">Quiero el método</a>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  document.getElementById('anio').textContent=new Date().getFullYear();
+  /* Aparición suave al bajar */
+  var els=document.querySelectorAll('.aparece');
+  function mostrar(el){el.classList.add('visto')}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){mostrar(e.target);io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(mostrar)}
+  function revisar(){els.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0)mostrar(el)})}
+  setTimeout(revisar,300);
+  /* Barra fija: aparece después del hero y se oculta en la sección de compra */
+  var barra=document.getElementById('barra'),hero=document.querySelector('.hero'),oferta=document.getElementById('comprar');
+  function alBajar(){
+    var pasoHero=hero.getBoundingClientRect().bottom<0;
+    var r=oferta.getBoundingClientRect(),enOferta=r.top<innerHeight&&r.bottom>0;
+    barra.classList.toggle('ver',pasoHero&&!enOferta);
+    revisar();
+  }
+  window.addEventListener('scroll',alBajar,{passive:true});alBajar();
+})();
+</script>
+</body>
+</html>
