@@ -129,15 +129,18 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .autor p+p{margin-top:12px}
 .autor b{color:#fff}
 
-/* Testimonios (provisorios) */
-.testis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
-.testi{background:var(--tarjeta);border:1px dashed #4a4b55;border-radius:22px;padding:22px;position:relative}
-.testi .etq{position:absolute;top:-11px;left:18px;background:#3a3b44;color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.3em .7em;border-radius:999px}
-.testi p{color:var(--suave);font-style:italic}
-.testi .quien{display:flex;align-items:center;gap:10px;margin-top:16px;font-style:normal}
-.testi .avatar{width:38px;height:38px;border-radius:50%;background:var(--tarjeta-2);border:1px solid var(--borde)}
-.testi .quien b{display:block;font-size:.9rem;color:#fff}
-.testi .quien small{color:var(--gris);font-size:.8rem}
+/* Respaldo */
+.cita{background:var(--tarjeta);border:1px solid var(--borde);border-radius:26px;padding:30px;margin-top:24px;position:relative}
+.cita::before{content:"\201C";position:absolute;top:-6px;left:22px;font-size:5rem;line-height:1;color:var(--naranja);font-weight:800}
+.cita blockquote{font-size:clamp(1.1rem,2.4vw,1.32rem);line-height:1.5;font-weight:600;letter-spacing:-.01em;padding-top:18px}
+.cita figcaption{margin-top:18px}
+.cita figcaption b{display:block}
+.cita figcaption span{color:var(--gris);font-size:.88rem}
+.cifras{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.cifras div{background:var(--fondo);border:1px solid var(--borde);border-radius:20px;padding:18px;text-align:center}
+.cifras b{display:block;font-size:1.9rem;font-weight:800;letter-spacing:-.04em;color:var(--naranja);line-height:1.1}
+.cifras span{color:var(--suave);font-size:.84rem;line-height:1.35;display:block;margin-top:4px}
+@media (max-width:600px){.cifras{grid-template-columns:1fr}}
 
 /* Precio */
 .oferta{max-width:560px;margin:0 auto;text-align:center}
@@ -199,7 +202,7 @@ footer a{color:var(--suave)}
   .hero-grid{grid-template-columns:1fr;gap:28px}
   .tapa-hero{order:-1;aspect-ratio:1.25/1}
   .tapa-hero img{width:46%}
-  .dolores,.volumenes,.testis{grid-template-columns:1fr}
+  .dolores,.volumenes{grid-template-columns:1fr}
   .compases{grid-template-columns:repeat(2,1fr)}
   .extras,.paraquien{grid-template-columns:1fr}
   .top .mini-btn{display:none}
@@ -345,15 +348,19 @@ footer a{color:var(--suave)}
   </div>
 </section>
 
-<!-- 7. TESTIMONIOS — PROVISORIOS: reemplazar por testimonios reales antes de publicar -->
+<!-- 7. RESPALDO — cita real del prólogo del eBook I. Testimonios de alumnos: sumar acá cuando estén (reales y con permiso) -->
 <section>
-  <div class="wrap aparece">
-    <p class="eyebrow">Testimonios</p>
-    <h2>Lo que dicen los alumnos</h2>
-    <div class="testis">
-      <figure class="testi"><span class="etq">Provisorio</span><p>«Acá va el testimonio de un alumno: qué le costaba antes y qué logró con el método.»</p><figcaption class="quien"><span class="avatar"></span><span><b>Nombre del alumno</b><small>Ciudad · instrumento</small></span></figcaption></figure>
-      <figure class="testi"><span class="etq">Provisorio</span><p>«Acá va un comentario real de Instagram, Patreon o WhatsApp, con permiso de la persona.»</p><figcaption class="quien"><span class="avatar"></span><span><b>Nombre del alumno</b><small>Ciudad · instrumento</small></span></figcaption></figure>
-      <figure class="testi"><span class="etq">Provisorio</span><p>«Acá va la opinión de un profesor o músico que use el método con sus alumnos.»</p><figcaption class="quien"><span class="avatar"></span><span><b>Nombre</b><small>Profesión</small></span></figcaption></figure>
+  <div class="wrap angosto aparece">
+    <p class="eyebrow">Respaldo</p>
+    <h2>Lo que dicen del método</h2>
+    <figure class="cita">
+      <blockquote>«Jordan Migues ha sido uno de los más notables intérpretes del cajón flamenco en Latinoamérica […] Jordan es el primo hermano que necesitas para iniciarte en el flamenco.»</blockquote>
+      <figcaption><b>Paolo De Gregorio</b><span>Músico, luthier y escritor de «El Mundo del Cajón». Del prólogo de Los Ritmos del Flamenco.</span></figcaption>
+    </figure>
+    <div class="cifras">
+      <div><b>+2 M</b><span>de reproducciones en redes en el último mes</span></div>
+      <div><b>+10 años</b><span>en los escenarios flamencos de Buenos Aires</span></div>
+      <div><b>7</b><span>idiomas en los que está el método</span></div>
     </div>
   </div>
 </section>
@@ -373,8 +380,7 @@ footer a{color:var(--suave)}
         <li>Partituras de palmas y cajón</li>
         <li>Videos de demostración de cada ejercicio</li>
       </ul>
-      <!-- ENLACE: pago del método en Lemon Squeezy -->
-      <a href="#" class="btn btn-ancho" id="btn-comprar">Comprar ahora por 59,90 USD</a>
+      <a href="https://hispanapercusion.lemonsqueezy.com/checkout/buy/b631cc57-af72-4282-96b8-9967cb562df1" class="btn btn-ancho" id="btn-comprar" target="_blank" rel="noopener">Comprar ahora por 59,90 USD</a>
       <div class="seguro"><span>Acceso inmediato por email</span><span>Pago seguro</span></div>
       <div class="garantia">
         <span class="escudo">7<small>DÍAS</small></span>
