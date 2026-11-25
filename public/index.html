@@ -373,6 +373,9 @@ a.post:hover img{transform:scale(1.03)}
 .pro-linea{margin-top:18px;font-size:.88rem;color:var(--suave);line-height:1.6}
 .pro-linea b{color:#fff}
 .pro-linea s{opacity:.7;margin-right:4px}
+.pro-linea .naranja{color:var(--naranja)}
+.promo-txt s{font-weight:600;opacity:.6;margin-left:4px;font-size:.9em}
+#promo-metodo{margin:0 0 26px}
 .pro-linea a{color:var(--naranja);font-weight:700;text-decoration:none;white-space:nowrap}
 .pro-linea a:hover{text-decoration:underline}
 .sonido{position:absolute;right:22px;top:22px;width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.25);background:rgba(10,11,14,.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:#fff;font-size:1.05rem;line-height:1;border-radius:50%;cursor:pointer}
@@ -455,7 +458,7 @@ body.hoja-abierta{overflow:hidden}
       </div>
       <span class="gratis">Gratis para empezar</span>
       <h1><span class="ln"><span>Tu compás</span></span> <span class="ln"><span>flamenco,</span></span> <span class="ln"><span class="naranja">en el bolsillo</span></span></h1>
-      <p class="lead">Practicá los 8 ritmos base del flamenco con reloj de compás, partitura, palmas reales, cajón y metrónomo. Mirá el compás mientras suena y tocá encima.</p>
+      <p class="lead">Practicá los 8 ritmos base del flamenco con reloj de compás, partitura, palmas reales, cajón y metrónomo. Mirá el compás mientras tocás o bailás.</p>
       <a data-instalar href="https://hispanapp.hispanapercusion.com/" class="promo" id="promo-dic">
         <span class="promo-num">−40%</span>
         <span class="promo-txt"><b>HispanApp PRO a 14,99 USD</b><small id="promo-sub">Solo en diciembre</small></span>
@@ -464,7 +467,7 @@ body.hoja-abierta{overflow:hidden}
         <a data-instalar href="https://hispanapp.hispanapercusion.com/" class="btn btn-naranja btn-grande">Empezar gratis</a>
         <a href="#funciones" class="btn btn-gris btn-grande">Ver cómo funciona</a>
       </div>
-      <p class="pro-linea"><b>HispanApp PRO</b> · 8 ritmos, videos y entrenador · pago único <span id="pro-precio">24,99 USD</span> · <a href="https://buy.polar.sh/polar_cl_3r6SACAjkFbKaOOz2VOxPNQr4Dsc5hQMWeoKF3JEOkd" id="pro-comprar" target="_blank" rel="noopener">Comprar PRO →</a></p>
+      <p class="pro-linea"><b>HispanApp PRO</b> · 8 ritmos, videos y entrenador · pago único <span id="pro-precio"><s>24,99</s> <b class="naranja">14,99 USD</b> con el 40% de Navidad <span id="pro-cuando">(del 1 al 31 de diciembre)</span></span> · <a href="https://buy.polar.sh/polar_cl_3r6SACAjkFbKaOOz2VOxPNQr4Dsc5hQMWeoKF3JEOkd" id="pro-comprar" target="_blank" rel="noopener">Comprar PRO →</a></p>
     </div>
     <div class="reel" data-par="0.06">
       <video id="promo" src="img/app-promo.mp4" poster="img/app-poster.webp" autoplay muted loop playsinline preload="metadata" aria-label="Video promocional de HispanApp"></video>
@@ -510,6 +513,10 @@ body.hoja-abierta{overflow:hidden}
         <div class="cabecera"><p class="eyebrow">Método completo · 3 volúmenes</p><span class="pill">Nueva edición</span><span class="pill pill-gris">Incluye videos</span></div>
         <h2 class="titulo">Los Ritmos <span class="naranja">del Flamenco</span></h2>
         <p class="lead">Los 8 ritmos base del flamenco en cajón y palmas, con partituras y videos de cada ejercicio.</p>
+        <a href="/metodo/" class="promo" id="promo-metodo">
+          <span class="promo-num">−40%</span>
+          <span class="promo-txt"><b>Método completo a 59,99 USD <s>99,90</s></b><small class="promo-sub">Navidad · desde el 1 de diciembre</small></span>
+        </a>
         <ul class="filas escalona">
           <li><span class="txt"><small>eBook I · Compás de 12 tiempos</small><b>Soleá por Bulerías · Alegrías · Seguiriyas</b></span></li>
           <li><span class="txt"><small>eBook II · Ritmos en 3/4</small><b>Bulerías · Sevillanas · Fandangos · Abandolaos</b></span></li>
@@ -542,11 +549,10 @@ body.hoja-abierta{overflow:hidden}
       <div>
         <div class="cabecera"><p class="eyebrow">Hecho a mano en Argentina</p><span class="pill">Modelo Noble</span></div>
         <h2 class="titulo">Cajón flamenco <span class="naranja">Hispana</span></h2>
-        <p class="lead">Un instrumento hecho a mano en Argentina con técnicas de construcción españolas. Maderas seleccionadas, armado artesanal y un sonido pensado para el flamenco: graves profundos y agudos con el chasquido justo. Cada cajón lleva la marca Hispana Percusión grabada a fuego.</p>
+        <p class="lead">Técnicas de construcción españolas y maderas seleccionadas para un sonido flamenco: graves profundos y agudos con el chasquido justo.</p>
         <ul class="filas specs escalona">
           <li><small>Medidas</small><b>30 × 48 × 30,3 cm</b></li>
           <li><small>Casco</small><b>Guatambú 9 mm</b></li>
-          <li><small>Fondo</small><b>Guatambú 6 mm</b></li>
           <li><small>Tapa</small><b>Abedul 3 mm</b></li>
           <li><small>Terminación</small><b>Barniz y marca a fuego</b></li>
         </ul>
@@ -657,7 +663,7 @@ body.hoja-abierta{overflow:hidden}
       <h2 class="titulo">¿Hablamos?</h2>
       <p class="lead">Consultas por la app, el método, los cajones o colaboraciones.</p>
       <div class="acciones">
-        <a href="https://wa.me/5491132025842?text=Hola%2C%20vengo%20de%20la%20web%20de%20Hispana%20Percusi%C3%B3n" class="btn btn-naranja" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://wa.me/5491132025842?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20de%20Hispana%20Percusi%C3%B3n%20y%20me%20interesan%20sus%20productos.%20%C2%BFMe%20podr%C3%ADan%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="btn btn-naranja" target="_blank" rel="noopener">WhatsApp</a>
         <a href="mailto:info@hispanapercusion.com" class="btn btn-gris">info@hispanapercusion.com</a>
         <a href="https://instagram.com/hispanapercusion" class="btn btn-gris" target="_blank" rel="noopener">@hispanapercusion</a>
       </div>
@@ -820,13 +826,16 @@ document.documentElement.classList.add('js');
       'polar_cl_RvBmjDybFo6TOCsqTzdbF4DqaZmPyS1KVXO9e3yFxn8':'polar_cl_l1Ssi8eR9Jv5HlvszWBlXT3YMfuFwXwnfqO2t0ebHuR'};
     var ahora=Date.now(),ini=Date.UTC(2026,11,1,3),fin=Date.UTC(2027,0,1,3);
     var el=document.getElementById('promo-dic'),sub=document.getElementById('promo-sub');
-    if(ahora>=fin){if(el)el.hidden=true;return}
+    var pm=document.getElementById('promo-metodo'),pp=document.getElementById('pro-precio');
+    if(ahora>=fin){if(el)el.hidden=true;if(pm)pm.hidden=true;if(pp)pp.textContent='24,99 USD';return}
     if(ahora<ini){if(sub)sub.textContent='Desde el 1 de diciembre';return}
     document.querySelectorAll('a[href*="buy.polar.sh/"]').forEach(function(a){
       var id=a.getAttribute('href').split('/').pop();if(NAVIDAD[id])a.href='https://buy.polar.sh/'+NAVIDAD[id]});
-    var pp=document.getElementById('pro-precio');if(pp)pp.innerHTML='<s>24,99</s> 14,99 USD';
+    var d=Math.ceil((fin-ahora)/864e5),cuenta=d<=1?'Último día':'Solo en diciembre · quedan '+d+' días';
+    var pc=document.getElementById('pro-cuando');if(pc)pc.textContent='(solo en diciembre)';
+    if(pm){pm.href=document.querySelector('#metodo .btn-naranja').href;pm.target='_blank';pm.rel='noopener';pm.querySelector('.promo-sub').textContent=cuenta}
     if(el){el.removeAttribute('data-instalar');el.href=document.getElementById('pro-comprar').href;el.target='_blank';el.rel='noopener';
-      var d=Math.ceil((fin-ahora)/864e5);sub.textContent=d<=1?'Último día':'Solo en diciembre · quedan '+d+' días'}
+      sub.textContent=cuenta}
   })();
 
   /* Sonido del video promocional */
