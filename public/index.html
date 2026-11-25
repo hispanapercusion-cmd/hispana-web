@@ -369,6 +369,15 @@ a.post:hover img{transform:scale(1.03)}
 @media (max-width:520px){.abanico .t0{width:66%!important}}
 @media (prefers-reduced-motion:reduce){.js .abanico:not(.abierto) .t0{transform:translate(-50%,-50%) rotate(-3deg)!important}}
 
+/* PRO y sonido del video */
+.pro-linea{margin-top:18px;font-size:.88rem;color:var(--suave);line-height:1.6}
+.pro-linea b{color:#fff}
+.pro-linea s{opacity:.7;margin-right:4px}
+.pro-linea a{color:var(--naranja);font-weight:700;text-decoration:none;white-space:nowrap}
+.pro-linea a:hover{text-decoration:underline}
+.sonido{position:absolute;right:22px;top:22px;width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.25);background:rgba(10,11,14,.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:#fff;font-size:1.05rem;line-height:1;border-radius:50%;cursor:pointer}
+.sonido:hover{border-color:var(--naranja)}
+
 /* ===== Ventana: instalar HispanApp ===== */
 .hoja{position:fixed;inset:0;z-index:100;display:flex;align-items:flex-end;justify-content:center}
 .hoja[hidden]{display:none}
@@ -446,18 +455,20 @@ body.hoja-abierta{overflow:hidden}
       </div>
       <span class="gratis">Gratis para empezar</span>
       <h1><span class="ln"><span>Tu compás</span></span> <span class="ln"><span>flamenco,</span></span> <span class="ln"><span class="naranja">en el bolsillo</span></span></h1>
-      <p class="lead">Practicá los 8 ritmos base del flamenco con partitura, reloj de compás y palmas reales. Mirá el compás mientras suena y tocá encima.</p>
+      <p class="lead">Practicá los 8 ritmos base del flamenco con reloj de compás, partitura, palmas reales, cajón y metrónomo. Mirá el compás mientras suena y tocá encima.</p>
       <a data-instalar href="https://hispanapp.hispanapercusion.com/" class="promo" id="promo-dic">
         <span class="promo-num">−40%</span>
-        <span class="promo-txt"><b>de lanzamiento</b><small id="promo-sub">Solo en diciembre</small></span>
+        <span class="promo-txt"><b>HispanApp PRO a 14,99 USD</b><small id="promo-sub">Solo en diciembre</small></span>
       </a>
       <div class="acciones">
         <a data-instalar href="https://hispanapp.hispanapercusion.com/" class="btn btn-naranja btn-grande">Empezar gratis</a>
         <a href="#funciones" class="btn btn-gris btn-grande">Ver cómo funciona</a>
       </div>
+      <p class="pro-linea"><b>HispanApp PRO</b> · 8 ritmos, videos y entrenador · pago único <span id="pro-precio">24,99 USD</span> · <a href="https://buy.polar.sh/polar_cl_3r6SACAjkFbKaOOz2VOxPNQr4Dsc5hQMWeoKF3JEOkd" id="pro-comprar" target="_blank" rel="noopener">Comprar PRO →</a></p>
     </div>
     <div class="reel" data-par="0.06">
       <video id="promo" src="img/app-promo.mp4" poster="img/app-poster.webp" autoplay muted loop playsinline preload="metadata" aria-label="Video promocional de HispanApp"></video>
+      <button class="sonido" id="sonido" type="button" aria-pressed="false" aria-label="Activar sonido" title="Activar sonido">🔇</button>
     </div>
   </div>
 </header>
@@ -474,14 +485,16 @@ body.hoja-abierta{overflow:hidden}
     </div>
     <p class="desliza">Deslizá para ver más →</p>
     <div class="carril escalona" id="carril">
-      <figure class="cuadro"><img src="img/app-f8.webp" alt="Los 8 ritmos del método LRDF" loading="lazy"><figcaption>Elegí cualquiera de los 8 ritmos del método.</figcaption></figure>
-      <figure class="cuadro"><img src="img/app-f1.webp" alt="Mira el compás mientras suena" loading="lazy"><figcaption>La partitura avanza con las palmas reales.</figcaption></figure>
-      <figure class="cuadro"><img src="img/app-f2.webp" alt="Cada tiempo, a la vista" loading="lazy"><figcaption>Cada tiempo del compás de 12, marcado en pantalla.</figcaption></figure>
-      <figure class="cuadro"><img src="img/app-f3.webp" alt="Gira el móvil: número gigante" loading="lazy"><figcaption>Modo atril: girá el celular y leé el tiempo de lejos, con las manos libres.</figcaption></figure>
-      <figure class="cuadro"><img src="img/app-f7.webp" alt="Palmas brillantes y sordas" loading="lazy"><figcaption>Palmas brillantes o sordas.</figcaption></figure>
-      <figure class="cuadro"><img src="img/app-f9.webp" alt="Entrenador progresivo" loading="lazy"><figcaption>Entrenador progresivo: sube la velocidad poco a poco.</figcaption></figure>
-      <figure class="cuadro"><img src="img/app-f5.webp" alt="Pensada para tus clases" loading="lazy"><figcaption>En tablet o proyector, pensada para el aula.</figcaption></figure>
-      <figure class="cuadro"><img src="img/app-f6.webp" alt="Compártela con tus alumnos" loading="lazy"><figcaption>Comunidad: compartila con tus alumnos.</figcaption></figure>
+      <figure class="cuadro"><img src="img/app-c1.webp" alt="Primero, la cuenta previa" loading="lazy"><figcaption>Cuenta previa 3-2-1 antes de arrancar.</figcaption></figure>
+      <figure class="cuadro"><img src="img/app-c2.webp" alt="Cada tiempo, a la vista" loading="lazy"><figcaption>Reloj de compás: cada tiempo y cada acento, marcado en pantalla.</figcaption></figure>
+      <figure class="cuadro"><img src="img/app-c3.webp" alt="Palmas, cajón y metrónomo" loading="lazy"><figcaption>Palmas reales, cajón y metrónomo: combiná las capas que quieras.</figcaption></figure>
+      <figure class="cuadro"><img src="img/app-c4.webp" alt="Velocidad a tu ritmo" loading="lazy"><figcaption>Subí o bajá la velocidad, o marcala con TAP.</figcaption></figure>
+      <figure class="cuadro"><img src="img/app-c5.webp" alt="Cuenta 2-1-2 o 12-1-2" loading="lazy"><figcaption>Elegí cómo contar el compás.</figcaption></figure>
+      <figure class="cuadro"><img src="img/app-c6.webp" alt="Y si quieres, la partitura" loading="lazy"><figcaption>Y si querés, la partitura avanza con el sonido.</figcaption></figure>
+      <figure class="cuadro"><img src="img/app-c7.webp" alt="Modo atril: se ve de lejos" loading="lazy"><figcaption>Modo atril: girá el celular y leé el tiempo de lejos.</figcaption></figure>
+      <figure class="cuadro"><img src="img/app-c8.webp" alt="También en tablet" loading="lazy"><figcaption>También en tablet o computadora, ideal para el aula.</figcaption></figure>
+      <figure class="cuadro"><img src="img/app-c9.webp" alt="Y todos los ritmos" loading="lazy"><figcaption>Los 8 ritmos del método: de Soleá por Bulerías a Tangos.</figcaption></figure>
+      <figure class="cuadro"><img src="img/app-c10.webp" alt="Practica cada día" loading="lazy"><figcaption>Racha de práctica: cada día que tocás, suma.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -792,13 +805,35 @@ document.documentElement.classList.add('js');
   },3200);
   document.querySelectorAll('.flechas button').forEach(function(b){b.addEventListener('click',function(){carril.scrollBy({left:parseInt(b.dataset.dir,10)*246*2,behavior:'smooth'})})});
 
-  /* Promo de diciembre: antes del 1/12 anuncia, durante diciembre cuenta los días, después se oculta */
+  /* Promo de diciembre (hora de Argentina): antes del 1/12 anuncia; en diciembre los botones de compra
+     pasan a los links «Navidad 40%» de Polar y cuenta los días; después vuelve todo a la normalidad */
   (function(){
-    var el=document.getElementById('promo-dic'),sub=document.getElementById('promo-sub');if(!el)return;
-    var hoy=new Date(),y=2026,ini=new Date(y,11,1),fin=new Date(y,11,31,23,59,59);
-    if(hoy>fin){el.hidden=true;return}
-    if(hoy<ini){sub.textContent='Desde el 1 de diciembre';return}
-    var d=Math.ceil((fin-hoy)/864e5);sub.textContent=d<=1?'Último día':'Solo en diciembre · quedan '+d+' días';
+    var NAVIDAD={
+      'polar_cl_3r6SACAjkFbKaOOz2VOxPNQr4Dsc5hQMWeoKF3JEOkd':'polar_cl_nEgfGW7LpHGEGtPiyr8k4L2mYxX6aISX9UjNL1xolkR',
+      'polar_cl_07edvA7aQWmvePFyX5snNynGdxrVyfQclEplo3QB2Cp':'polar_cl_LrOqcKdCa5DzVQybrZphHIBU73vZqgVm71PW24117lE',
+      'polar_cl_lQaF5zQalYUW89kdwtzgyIG9P52RZcwUcc6Te2bisvP':'polar_cl_j3jGx3eVBWWMiOQnpJB7582KzNs2y0I3eto4E1849u8',
+      'polar_cl_7yuoG0UMDEjbDHPfV3usCLo1s2yowSaZaoNsH1t8y7d':'polar_cl_iUviKRamqkepkuRcRCChjsGr1gvWOiG3qoHOi1Vj3dh',
+      'polar_cl_rqUscTxN5rDoISOTO2o5zU0tPHcCbymyD5d610ipqvD':'polar_cl_EjgKPn8fruiA6L4rLUpuuq398zPzZaSenUN773Xfkmm',
+      'polar_cl_giONHrslP6WJpAy9hfQX5uG5TXk2epLQSgjFi3SGVo7':'polar_cl_vnNHyinUf3688X36RKVEnuemhF3C88mIpIfey2d3rBk',
+      'polar_cl_DkS8qJ1ir5bzTBo6CtsK4nS5J2k2kdGbmYIK71GTG8E':'polar_cl_yh6qUfqTSYPyp2PCDcsuqMyiFRSvicC0mwwGh3ldZI7',
+      'polar_cl_SX0KgG5wKryLXXPO3oG7qWPiCHxCedvtF2jtk0BhEVr':'polar_cl_T6FYharXsQ3fTeBDIcYYRVYisft1UZoiTXxpU3PjHzS',
+      'polar_cl_RvBmjDybFo6TOCsqTzdbF4DqaZmPyS1KVXO9e3yFxn8':'polar_cl_l1Ssi8eR9Jv5HlvszWBlXT3YMfuFwXwnfqO2t0ebHuR'};
+    var ahora=Date.now(),ini=Date.UTC(2026,11,1,3),fin=Date.UTC(2027,0,1,3);
+    var el=document.getElementById('promo-dic'),sub=document.getElementById('promo-sub');
+    if(ahora>=fin){if(el)el.hidden=true;return}
+    if(ahora<ini){if(sub)sub.textContent='Desde el 1 de diciembre';return}
+    document.querySelectorAll('a[href*="buy.polar.sh/"]').forEach(function(a){
+      var id=a.getAttribute('href').split('/').pop();if(NAVIDAD[id])a.href='https://buy.polar.sh/'+NAVIDAD[id]});
+    var pp=document.getElementById('pro-precio');if(pp)pp.innerHTML='<s>24,99</s> 14,99 USD';
+    if(el){el.removeAttribute('data-instalar');el.href=document.getElementById('pro-comprar').href;el.target='_blank';el.rel='noopener';
+      var d=Math.ceil((fin-ahora)/864e5);sub.textContent=d<=1?'Último día':'Solo en diciembre · quedan '+d+' días'}
+  })();
+
+  /* Sonido del video promocional */
+  (function(){
+    var v=document.getElementById('promo'),b=document.getElementById('sonido');if(!v||!b)return;
+    b.addEventListener('click',function(){v.muted=!v.muted;if(!v.muted){v.currentTime=0;v.play()}
+      var t=v.muted?'Activar sonido':'Silenciar';b.textContent=v.muted?'🔇':'🔊';b.setAttribute('aria-label',t);b.title=t;b.setAttribute('aria-pressed',String(!v.muted))});
   })();
 
   /* Últimos videos de Patreon (los entrega _worker.js en /api/patreon) */
