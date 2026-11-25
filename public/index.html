@@ -369,6 +369,33 @@ a.post:hover img{transform:scale(1.03)}
 @media (max-width:520px){.abanico .t0{width:66%!important}}
 @media (prefers-reduced-motion:reduce){.js .abanico:not(.abierto) .t0{transform:translate(-50%,-50%) rotate(-3deg)!important}}
 
+/* ===== Gratis vs PRO ===== */
+.planes-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:10px}
+.plan{background:var(--tarjeta);border:1px solid var(--borde);border-radius:28px;padding:32px;display:flex;flex-direction:column}
+.plan-pro{background:radial-gradient(80% 60% at 100% 0%,rgba(232,82,43,.18),transparent 70%),linear-gradient(180deg,#1E1F26,#16171C);border-color:rgba(232,82,43,.55);box-shadow:0 30px 70px rgba(232,82,43,.12)}
+.plan-tit{font-weight:800;font-size:1.25rem}
+.plan-precio{font-weight:800;font-size:2.6rem;letter-spacing:-.03em;line-height:1.1;margin-top:10px}
+.plan-precio s{font-size:.5em;color:var(--suave);font-weight:600;margin-right:6px}
+.plan-precio small{font-size:.38em;color:var(--suave);font-weight:700;letter-spacing:.04em}
+.plan-nota{color:var(--naranja);font-size:.84rem;font-weight:600;margin:6px 0 22px}
+.plan:not(.plan-pro) .plan-nota{color:var(--suave)}
+.plan ul{list-style:none;display:grid;gap:12px;margin:0 0 28px;flex:1}
+.plan li{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;color:var(--suave);line-height:1.45}
+.plan li b{color:#fff;font-weight:700}
+.plan li svg{flex:0 0 18px;width:18px;height:18px;margin-top:2px;color:var(--naranja)}
+.btn-ancho{width:100%}
+.plan-garantia{text-align:center;font-size:.8rem;color:var(--suave);margin-top:12px}
+.angosto{max-width:780px}
+.faq-lista{display:grid;gap:10px;margin-top:10px}
+.faq details{background:var(--tarjeta);border:1px solid var(--borde);border-radius:18px;padding:0 22px}
+.faq summary{cursor:pointer;list-style:none;font-weight:700;padding:18px 28px 18px 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);color:var(--naranja);font-size:1.4rem;font-weight:600;transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{color:var(--suave);padding:0 0 18px;line-height:1.6}
+.faq details a{color:var(--naranja)}
+@media (max-width:760px){.planes-grid{grid-template-columns:1fr}.plan{padding:26px}}
+
 /* PRO y sonido del video */
 .pro-linea{margin-top:18px;font-size:.88rem;color:var(--suave);line-height:1.6}
 .pro-linea b{color:#fff}
@@ -458,7 +485,7 @@ body.hoja-abierta{overflow:hidden}
       </div>
       <span class="gratis">Gratis para empezar</span>
       <h1><span class="ln"><span>Tu compás</span></span> <span class="ln"><span>flamenco,</span></span> <span class="ln"><span class="naranja">en el bolsillo</span></span></h1>
-      <p class="lead">Practicá los 8 ritmos base del flamenco con reloj de compás, partitura, palmas reales, cajón y metrónomo. Mirá el compás mientras tocás o bailás.</p>
+      <p class="lead">Practica los 8 ritmos base del flamenco con reloj de compás, partitura, palmas reales, cajón y metrónomo. Mira el compás mientras tocas o bailas.</p>
       <a data-instalar href="https://hispanapp.hispanapercusion.com/" class="promo" id="promo-dic">
         <span class="promo-num">−40%</span>
         <span class="promo-txt"><b>HispanApp PRO a 14,99 USD</b><small id="promo-sub">Solo en diciembre</small></span>
@@ -486,21 +513,69 @@ body.hoja-abierta{overflow:hidden}
       </div>
       <div class="flechas"><button aria-label="Anterior" data-dir="-1">←</button><button aria-label="Siguiente" data-dir="1">→</button></div>
     </div>
-    <p class="desliza">Deslizá para ver más →</p>
+    <p class="desliza">Desliza para ver más →</p>
     <div class="carril escalona" id="carril">
       <figure class="cuadro"><img src="img/app-c1.webp" alt="Primero, la cuenta previa" loading="lazy"><figcaption>Cuenta previa 3-2-1 antes de arrancar.</figcaption></figure>
       <figure class="cuadro"><img src="img/app-c2.webp" alt="Cada tiempo, a la vista" loading="lazy"><figcaption>Reloj de compás: cada tiempo y cada acento, marcado en pantalla.</figcaption></figure>
-      <figure class="cuadro"><img src="img/app-c3.webp" alt="Palmas, cajón y metrónomo" loading="lazy"><figcaption>Palmas reales, cajón y metrónomo: combiná las capas que quieras.</figcaption></figure>
-      <figure class="cuadro"><img src="img/app-c4.webp" alt="Velocidad a tu ritmo" loading="lazy"><figcaption>Subí o bajá la velocidad, o marcala con TAP.</figcaption></figure>
-      <figure class="cuadro"><img src="img/app-c5.webp" alt="Cuenta 2-1-2 o 12-1-2" loading="lazy"><figcaption>Elegí cómo contar el compás.</figcaption></figure>
-      <figure class="cuadro"><img src="img/app-c6.webp" alt="Y si quieres, la partitura" loading="lazy"><figcaption>Y si querés, la partitura avanza con el sonido.</figcaption></figure>
-      <figure class="cuadro"><img src="img/app-c7.webp" alt="Modo atril: se ve de lejos" loading="lazy"><figcaption>Modo atril: girá el celular y leé el tiempo de lejos.</figcaption></figure>
+      <figure class="cuadro"><img src="img/app-c3.webp" alt="Palmas, cajón y metrónomo" loading="lazy"><figcaption>Palmas reales, cajón y metrónomo: combina las capas que quieras.</figcaption></figure>
+      <figure class="cuadro"><img src="img/app-c4.webp" alt="Velocidad a tu ritmo" loading="lazy"><figcaption>Sube o baja la velocidad, o márcala con TAP.</figcaption></figure>
+      <figure class="cuadro"><img src="img/app-c5.webp" alt="Cuenta 2-1-2 o 12-1-2" loading="lazy"><figcaption>Elige cómo contar el compás.</figcaption></figure>
+      <figure class="cuadro"><img src="img/app-c6.webp" alt="Y si quieres, la partitura" loading="lazy"><figcaption>Y si quieres, la partitura avanza con el sonido.</figcaption></figure>
+      <figure class="cuadro"><img src="img/app-c7.webp" alt="Modo atril: se ve de lejos" loading="lazy"><figcaption>Modo atril: gira el celular y lee el tiempo de lejos.</figcaption></figure>
       <figure class="cuadro"><img src="img/app-c8.webp" alt="También en tablet" loading="lazy"><figcaption>También en tablet o computadora, ideal para el aula.</figcaption></figure>
       <figure class="cuadro"><img src="img/app-c9.webp" alt="Y todos los ritmos" loading="lazy"><figcaption>Los 8 ritmos del método: de Soleá por Bulerías a Tangos.</figcaption></figure>
-      <figure class="cuadro"><img src="img/app-c10.webp" alt="Practica cada día" loading="lazy"><figcaption>Racha de práctica: cada día que tocás, suma.</figcaption></figure>
+      <figure class="cuadro"><img src="img/app-c10.webp" alt="Practica cada día" loading="lazy"><figcaption>Racha de práctica: cada día que tocas, suma.</figcaption></figure>
     </div>
   </div>
 </section>
+
+<!-- Gratis vs PRO -->
+<section class="planes" id="planes">
+  <div class="wrap">
+    <div class="aparece">
+      <p class="eyebrow">Gratis o PRO</p>
+      <h2 class="titulo">Empieza gratis, <span class="naranja">sigue con PRO</span></h2>
+    </div>
+    <div class="planes-grid escalona">
+      <div class="plan">
+        <p class="plan-tit">Gratis</p>
+        <p class="plan-precio">0 USD</p>
+        <p class="plan-nota">Para siempre, sin tarjeta</p>
+        <ul><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ritmos I (Alegrías / Soleá por Bulería) y VI (Tangos / Rumbas)</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Reloj de compás y partitura</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Palmas reales, cajón y metrónomo</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Modo atril y racha de práctica</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Funciona sin conexión</span></li></ul>
+        <a data-instalar href="https://hispanapp.hispanapercusion.com/" class="btn btn-gris btn-ancho">Empezar gratis</a>
+      </div>
+      <div class="plan plan-pro">
+        <p class="plan-tit">HispanApp <span class="naranja">PRO</span></p>
+        <p class="plan-precio" id="plan-precio"><s>24,99</s> 14,99 <small>USD</small></p>
+        <p class="plan-nota" id="plan-nota">Con el 40% de Navidad, del 1 al 31 de diciembre</p>
+        <ul><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Todo lo de la versión gratis</b></span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Los 8 ritmos</b> del método</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Videos</b> de cada ritmo</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Entrenador progresivo</b> de velocidad</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Pago único, sin suscripción</span></li></ul>
+        <a href="https://buy.polar.sh/polar_cl_3r6SACAjkFbKaOOz2VOxPNQr4Dsc5hQMWeoKF3JEOkd" class="btn btn-naranja btn-ancho" target="_blank" rel="noopener">Comprar PRO</a>
+        <p class="plan-garantia">Garantía de 10 días · Se activa sola al pagar</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Preguntas frecuentes de la app -->
+<section class="faq" id="faq">
+  <div class="wrap angosto">
+    <div class="aparece">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2 class="titulo">Sobre <span class="naranja">HispanApp</span></h2>
+    </div>
+    <div class="faq-lista aparece">
+      <details><summary>¿Es gratis?</summary><p>Sí. Puedes usarla gratis para siempre con los ritmos I y VI y todas las herramientas: reloj de compás, partitura, palmas, cajón, metrónomo y modo atril. Con PRO desbloqueas los 8 ritmos, los videos y el entrenador.</p></details>
+      <details><summary>¿Es una suscripción?</summary><p>No. PRO es un pago único: pagas una vez y es tuyo, sin vencimiento y sin cobros mensuales.</p></details>
+      <details><summary>¿Funciona en iPhone y Android?</summary><p>Sí. HispanApp se instala desde el navegador (Safari en iPhone, Chrome en Android) y queda con su ícono en la pantalla de inicio, como cualquier app. No hace falta App Store ni Google Play. También funciona en tablet y computadora.</p></details>
+      <details><summary>¿Cómo activo PRO después de pagar?</summary><p>Al terminar el pago vuelves a la app y PRO se activa solo. Además te llega por email tu clave de acceso. En iPhone, si compraste desde Safari, abre la app desde su ícono, toca «¿Ya compraste HispanApp PRO?» y pega la clave.</p></details>
+      <details><summary>¿Puedo usarla en varios dispositivos?</summary><p>Sí. Con la misma clave puedes activar PRO en tu celular, tu tablet y tu computadora.</p></details>
+      <details><summary>¿Funciona sin internet?</summary><p>Sí. Una vez instalada, puedes practicar sin conexión. Solo los videos necesitan internet.</p></details>
+      <details><summary>¿En qué idiomas está?</summary><p>En español y en inglés. Cambia de idioma con el botón ES/EN.</p></details>
+      <details><summary>¿Hay garantía?</summary><p>Sí, de 10 días. Si PRO no es para ti, escríbenos a <a href="mailto:info@hispanapercusion.com">info@hispanapercusion.com</a> y te devolvemos el dinero.</p></details>
+    </div>
+  </div>
+</section>
+
 
 <!-- ================= 2. EL MÉTODO: los 3 volúmenes ================= -->
 <section class="pack" id="metodo">
@@ -577,7 +652,7 @@ body.hoja-abierta{overflow:hidden}
         <ul class="filas escalona">
           <li><span class="ico-f">▶</span><span class="txt"><b>Videolecciones por ritmo</b><small>Palmas y cajón, del compás a los cortes</small></span></li>
           <li><span class="ico-f">✦</span><span class="txt"><b>Contenido nuevo</b><small>Publicaciones y videos periódicos</small></span></li>
-          <li><span class="ico-f">◎</span><span class="txt"><b>Chats con la comunidad</b><small>Preguntá y compartí tu avance</small></span></li>
+          <li><span class="ico-f">◎</span><span class="txt"><b>Chats con la comunidad</b><small>Pregunta y comparte tu avance</small></span></li>
         </ul>
         <a href="https://www.patreon.com/HispanaPercusion" class="btn btn-naranja btn-grande" target="_blank" rel="noopener">Unirme en Patreon</a>
       </div>
@@ -679,13 +754,13 @@ body.hoja-abierta{overflow:hidden}
     <button class="hoja-x" data-cerrar aria-label="Cerrar">×</button>
     <div class="hoja-top">
       <span class="tile"><img src="img/logo.png" alt=""></span>
-      <div><p class="eyebrow">Gratis para empezar</p><h2 id="hoja-tit">Instalá HispanApp en tu celular</h2></div>
+      <div><p class="eyebrow">Gratis para empezar</p><h2 id="hoja-tit">Instala HispanApp en tu celular</h2></div>
     </div>
     <p class="hoja-lead">No hace falta tienda de apps: se instala desde el navegador en un minuto y queda en tu pantalla de inicio, como cualquier app.</p>
 
     <div class="aviso-ig" id="aviso-ig" hidden>
       <b>Estás dentro de Instagram</b>
-      <span>Primero abrí esta página en tu navegador: tocá <b>•••</b> arriba a la derecha y elegí <b>Abrir en el navegador</b> (o «Abrir en Safari»).</span>
+      <span>Primero abre esta página en tu navegador: toca <b>•••</b> arriba a la derecha y elige <b>Abrir en el navegador</b> (o «Abrir en Safari»).</span>
     </div>
 
     <div class="pestanas" role="tablist">
@@ -695,21 +770,21 @@ body.hoja-abierta{overflow:hidden}
     </div>
 
     <ol class="pasos" data-panel="ios">
-      <li><span class="n">1</span><span>Tocá <b>Abrir HispanApp</b>: ahí te mostramos con una flecha dónde tocar. Tiene que abrirse en <b>Safari</b>.</span></li>
-      <li><span class="n">2</span><span>Tocá el botón <b>Compartir</b> <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5M5 12v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> de la barra de abajo.</span></li>
-      <li><span class="n">3</span><span>Bajá y elegí <b>Agregar a inicio</b> <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 8.5v7M8.5 12h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> y después <b>Agregar</b>.</span></li>
-      <li><span class="n">4</span><span>Listo: abrila desde el ícono de <b>HispanApp</b> en tu pantalla de inicio.</span></li>
+      <li><span class="n">1</span><span>Toca <b>Abrir HispanApp</b>: ahí te mostramos con una flecha dónde tocar. Tiene que abrirse en <b>Safari</b>.</span></li>
+      <li><span class="n">2</span><span>Toca el botón <b>Compartir</b> <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5M5 12v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> de la barra de abajo.</span></li>
+      <li><span class="n">3</span><span>Baja y elige <b>Agregar a inicio</b> <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 8.5v7M8.5 12h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> y después <b>Agregar</b>.</span></li>
+      <li><span class="n">4</span><span>Listo: ábrela desde el ícono de <b>HispanApp</b> en tu pantalla de inicio.</span></li>
     </ol>
     <ol class="pasos" data-panel="android" hidden>
-      <li><span class="n">1</span><span>Tocá <b>Abrir HispanApp</b>: ahí aparece el botón <b>Instalar</b>. Conviene que se abra en <b>Chrome</b>.</span></li>
-      <li><span class="n">2</span><span>Si aparece el aviso <b>Instalar app</b>, tocalo. Si no, abrí el menú <b>⋮</b> de arriba a la derecha.</span></li>
-      <li><span class="n">3</span><span>Elegí <b>Instalar app</b> o <b>Agregar a la pantalla principal</b> y confirmá.</span></li>
+      <li><span class="n">1</span><span>Toca <b>Abrir HispanApp</b>: ahí aparece el botón <b>Instalar</b>. Conviene que se abra en <b>Chrome</b>.</span></li>
+      <li><span class="n">2</span><span>Si aparece el aviso <b>Instalar app</b>, tócalo. Si no, abre el menú <b>⋮</b> de arriba a la derecha.</span></li>
+      <li><span class="n">3</span><span>Elige <b>Instalar app</b> o <b>Agregar a la pantalla principal</b> y confirma.</span></li>
       <li><span class="n">4</span><span>Listo: vas a ver el ícono de <b>HispanApp</b> con el resto de tus apps.</span></li>
     </ol>
     <div class="pasos-pc" data-panel="desktop" hidden>
-      <p>HispanApp está pensada para el celular, para tenerla a mano mientras tocás. Abrí este link desde tu teléfono y seguí los pasos de iPhone o Android:</p>
+      <p>HispanApp está pensada para el celular, para tenerla a mano mientras tocas. Abre este link desde tu teléfono y sigue los pasos de iPhone o Android:</p>
       <div class="copiar"><code id="link-app">hispanapp.hispanapercusion.com</code><button class="btn btn-gris" id="btn-copiar" type="button">Copiar link</button></div>
-      <p class="chico">También la podés usar en la computadora, en Chrome o Edge, y ahí mismo instalarla desde el ícono <b>Instalar</b> de la barra de direcciones.</p>
+      <p class="chico">También la puedes usar en la computadora, en Chrome o Edge, y ahí mismo instalarla desde el ícono <b>Instalar</b> de la barra de direcciones.</p>
     </div>
 
     <a href="https://hispanapp.hispanapercusion.com/?instalar=1&amp;utm_source=web" class="btn btn-naranja btn-grande hoja-ir" id="hoja-ir" target="_blank" rel="noopener">Abrir HispanApp</a>
@@ -827,12 +902,13 @@ document.documentElement.classList.add('js');
     var ahora=Date.now(),ini=Date.UTC(2026,11,1,3),fin=Date.UTC(2027,0,1,3);
     var el=document.getElementById('promo-dic'),sub=document.getElementById('promo-sub');
     var pm=document.getElementById('promo-metodo'),pp=document.getElementById('pro-precio');
-    if(ahora>=fin){if(el)el.hidden=true;if(pm)pm.hidden=true;if(pp)pp.textContent='24,99 USD';return}
+    if(ahora>=fin){if(el)el.hidden=true;if(pm)pm.hidden=true;if(pp)pp.textContent='24,99 USD';var pl=document.getElementById('plan-precio');if(pl)pl.innerHTML='24,99 <small>USD</small>';var pn=document.getElementById('plan-nota');if(pn)pn.textContent='Pago único';return}
     if(ahora<ini){if(sub)sub.textContent='Desde el 1 de diciembre';return}
     document.querySelectorAll('a[href*="buy.polar.sh/"]').forEach(function(a){
       var id=a.getAttribute('href').split('/').pop();if(NAVIDAD[id])a.href='https://buy.polar.sh/'+NAVIDAD[id]});
     var d=Math.ceil((fin-ahora)/864e5),cuenta=d<=1?'Último día':'Solo en diciembre · quedan '+d+' días';
     var pc=document.getElementById('pro-cuando');if(pc)pc.textContent='(solo en diciembre)';
+    var pn=document.getElementById('plan-nota');if(pn)pn.textContent='40% de Navidad · '+cuenta.toLowerCase();
     if(pm){pm.href=document.querySelector('#metodo .btn-naranja').href;pm.target='_blank';pm.rel='noopener';pm.querySelector('.promo-sub').textContent=cuenta}
     if(el){el.removeAttribute('data-instalar');el.href=document.getElementById('pro-comprar').href;el.target='_blank';el.rel='noopener';
       sub.textContent=cuenta}
