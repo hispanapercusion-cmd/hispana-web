@@ -210,6 +210,12 @@ footer a{color:var(--suave)}
   .autor-foto{width:84px;height:84px;border-radius:22px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.js .aparece{opacity:1;transform:none}}
+.combo-caja{display:block;margin:18px 0 6px;padding:16px 18px;border:1px solid rgba(232,82,43,.45);border-radius:18px;background:linear-gradient(120deg,rgba(232,82,43,.14),rgba(232,82,43,.03));text-decoration:none;color:inherit;line-height:1.5}
+.combo-caja>b{display:block}
+.combo-caja span{display:block;font-size:.9rem;opacity:.85;margin-top:4px}
+.combo-caja s{opacity:.7}
+.combo-caja .naranja{color:#E8522B}
+.combo-caja .combo-ir{color:#E8522B;font-weight:700;opacity:1}
 </style>
 </head>
 <body>
@@ -387,6 +393,13 @@ footer a{color:var(--suave)}
         <p><b>Garantía de 10 días.</b> Si el método no es para ti, escríbenos dentro de los 10 días de la compra y te devolvemos el dinero.</p>
       </div>
 
+      <a class="combo-caja" href="https://buy.polar.sh/polar_cl_padndTAQEr074Ks6SFEVgCQwSakz4Hu3Gj56X4Fi53h" target="_blank" rel="noopener">
+        <b>Combo: método + HispanApp PRO</b>
+        <span>La app para practicar cada ritmo del libro con reloj de compás y palmas reales.</span>
+        <span id="combo-precio"><b>109,90 USD</b> <s>124,89</s></span>
+        <span class="combo-ir">Comprar el combo →</span>
+      </a>
+
       <div class="otros-idiomas">
         <p>¿Prefieres otro idioma?</p>
         <div class="chips"><a href="https://buy.polar.sh/polar_cl_lQaF5zQalYUW89kdwtzgyIG9P52RZcwUcc6Te2bisvP" hreflang="en" lang="en" target="_blank" rel="noopener">English</a><a href="https://buy.polar.sh/polar_cl_7yuoG0UMDEjbDHPfV3usCLo1s2yowSaZaoNsH1t8y7d" hreflang="pt" lang="pt" target="_blank" rel="noopener">Português</a><a href="https://buy.polar.sh/polar_cl_giONHrslP6WJpAy9hfQX5uG5TXk2epLQSgjFi3SGVo7" hreflang="de" lang="de" target="_blank" rel="noopener">Deutsch</a><a href="https://buy.polar.sh/polar_cl_rqUscTxN5rDoISOTO2o5zU0tPHcCbymyD5d610ipqvD" hreflang="fr" lang="fr" target="_blank" rel="noopener">Français</a><a href="https://buy.polar.sh/polar_cl_DkS8qJ1ir5bzTBo6CtsK4nS5J2k2kdGbmYIK71GTG8E" hreflang="it" lang="it" target="_blank" rel="noopener">Italiano</a><a href="https://buy.polar.sh/polar_cl_SX0KgG5wKryLXXPO3oG7qWPiCHxCedvtF2jtk0BhEVr" hreflang="ru" lang="ru" target="_blank" rel="noopener">Русский</a><a href="https://buy.polar.sh/polar_cl_RvBmjDybFo6TOCsqTzdbF4DqaZmPyS1KVXO9e3yFxn8" hreflang="zh" lang="zh" target="_blank" rel="noopener">中文</a><a href="https://buy.polar.sh/polar_cl_SeT3bB9luG9ucG3WLTDGdEnVuYT6b2vspLqdM2DkyOr" hreflang="ko" lang="ko" target="_blank" rel="noopener">한국어</a><a href="https://buy.polar.sh/polar_cl_AJTHwmIVYvKuP7rtexFKKWu8OQtHzaG5q444844ZdF0" hreflang="ja" lang="ja" target="_blank" rel="noopener">日本語</a></div>
@@ -460,6 +473,8 @@ document.documentElement.classList.add('js');
 /* Diciembre (hora de Argentina): los botones de compra pasan a los links «Navidad 40%» de Polar */
 (function(){
     var NAVIDAD={
+      'polar_cl_padndTAQEr074Ks6SFEVgCQwSakz4Hu3Gj56X4Fi53h':'polar_cl_w0Ul6SEXy5CtA0w1Ho23faLtRqycRiWuMhMGi3X0wJ0',
+      'polar_cl_IybZQafEHMeOcyhz8OxytTgX7IEMldt9hKOJG2kjL7H':'polar_cl_3znDwghtGgqzxKBRxsbLnzXEIgicheJYnzOh82cmcaB',
       'polar_cl_3r6SACAjkFbKaOOz2VOxPNQr4Dsc5hQMWeoKF3JEOkd':'polar_cl_nEgfGW7LpHGEGtPiyr8k4L2mYxX6aISX9UjNL1xolkR',
       'polar_cl_07edvA7aQWmvePFyX5snNynGdxrVyfQclEplo3QB2Cp':'polar_cl_LrOqcKdCa5DzVQybrZphHIBU73vZqgVm71PW24117lE',
       'polar_cl_lQaF5zQalYUW89kdwtzgyIG9P52RZcwUcc6Te2bisvP':'polar_cl_j3jGx3eVBWWMiOQnpJB7582KzNs2y0I3eto4E1849u8',
@@ -475,6 +490,10 @@ document.documentElement.classList.add('js');
   document.querySelectorAll('a[href*="buy.polar.sh/"]').forEach(function(a){
     var id=a.getAttribute('href').split('/').pop();if(NAVIDAD[id])a.href='https://buy.polar.sh/'+NAVIDAD[id]});
 })();
+  (function(){var c=document.getElementById('combo-precio');if(!c)return;var a=Date.now();
+    if(a>=Date.UTC(2026,11,1,3)&&a<Date.UTC(2027,0,1,3))c.innerHTML='<s>109,90</s> <b class="naranja">69,99 USD</b> con el 40% de Navidad';
+    else if(a<Date.UTC(2026,11,1,3))c.innerHTML='<b>109,90 USD</b> <s>124,89</s> · en diciembre, <b class="naranja">69,99</b>';})();
+
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b710b4a28b444e0786d2416a0a091c61"}'></script><!-- End Cloudflare Web Analytics -->
 </body>

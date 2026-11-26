@@ -626,6 +626,7 @@ nav .menu{order:3;margin-left:auto}
           <li><span class="txt"><small>eBook III · Ritmos en 4/4 y 6/8</small><b>Tangos · Rumbas · Tientos · Tanguillos</b></span></li>
         </ul>
         <a href="https://buy.polar.sh/polar_cl_07edvA7aQWmvePFyX5snNynGdxrVyfQclEplo3QB2Cp" class="btn btn-naranja btn-grande" target="_blank" rel="noopener">Comprar el método completo</a>
+        <p class="pro-linea combo-linea"><b>Combo método + HispanApp PRO</b> · los 3 eBooks y la app para practicar cada ritmo · <span id="combo-precio"><b>109,90 USD</b> <s>124,89</s></span> · <a href="https://buy.polar.sh/polar_cl_padndTAQEr074Ks6SFEVgCQwSakz4Hu3Gj56X4Fi53h" target="_blank" rel="noopener">Comprar el combo →</a></p>
         <p class="idiomas-tit">Disponible en</p>
         <div class="idiomas escalona">
           <a href="https://buy.polar.sh/polar_cl_07edvA7aQWmvePFyX5snNynGdxrVyfQclEplo3QB2Cp" hreflang="es" class="idioma idioma-ok" target="_blank" rel="noopener">Español</a>
@@ -918,6 +919,8 @@ document.documentElement.classList.add('js');
      pasan a los links «Navidad 40%» de Polar y cuenta los días; después vuelve todo a la normalidad */
   (function(){
     var NAVIDAD={
+      'polar_cl_padndTAQEr074Ks6SFEVgCQwSakz4Hu3Gj56X4Fi53h':'polar_cl_w0Ul6SEXy5CtA0w1Ho23faLtRqycRiWuMhMGi3X0wJ0',
+      'polar_cl_IybZQafEHMeOcyhz8OxytTgX7IEMldt9hKOJG2kjL7H':'polar_cl_3znDwghtGgqzxKBRxsbLnzXEIgicheJYnzOh82cmcaB',
       'polar_cl_3r6SACAjkFbKaOOz2VOxPNQr4Dsc5hQMWeoKF3JEOkd':'polar_cl_nEgfGW7LpHGEGtPiyr8k4L2mYxX6aISX9UjNL1xolkR',
       'polar_cl_07edvA7aQWmvePFyX5snNynGdxrVyfQclEplo3QB2Cp':'polar_cl_LrOqcKdCa5DzVQybrZphHIBU73vZqgVm71PW24117lE',
       'polar_cl_lQaF5zQalYUW89kdwtzgyIG9P52RZcwUcc6Te2bisvP':'polar_cl_j3jGx3eVBWWMiOQnpJB7582KzNs2y0I3eto4E1849u8',
@@ -944,6 +947,11 @@ document.documentElement.classList.add('js');
       sub.textContent=cuenta}
   })();
 
+
+
+  (function(){var c=document.getElementById('combo-precio');if(!c)return;var a=Date.now();
+    if(a>=Date.UTC(2026,11,1,3)&&a<Date.UTC(2027,0,1,3))c.innerHTML='<s>109,90</s> <b class="naranja">69,99 USD</b> con el 40% de Navidad';
+    else if(a<Date.UTC(2026,11,1,3))c.innerHTML='<b>109,90 USD</b> <s>124,89</s> · en diciembre, <b class="naranja">69,99</b>';})();
 
   /* Visitantes con el navegador en otro idioma: aviso para ver la web en inglés */
   (function(){
