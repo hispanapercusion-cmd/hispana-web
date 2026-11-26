@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0F1013">
+<title>¡Gracias por tu compra! · Hispana Percusión</title>
+<link rel="icon" type="image/png" href="/img/logo.png">
+<style>
+:root{--fondo:#0F1013;--tarjeta:#1A1B21;--tarjeta-2:#22232A;--borde:#2A2B32;--naranja:#E8522B;--naranja-osc:#C9431F;--texto:#F4F4F6;--suave:#A3A2AD;--gris:#7D7C88}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"SF Pro Display",system-ui,"Hiragino Sans","Apple SD Gothic Neo","PingFang SC","Noto Sans CJK",sans-serif;background:var(--fondo);color:var(--texto);line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;padding:40px 20px 56px}
+.wrap{max-width:640px;margin:0 auto}
+.logo{width:48px;margin-bottom:28px}
+.check{width:64px;height:64px;border-radius:50%;background:rgba(232,82,43,.14);border:1.5px solid var(--naranja);display:grid;place-items:center;font-size:1.9rem;color:var(--naranja);margin-bottom:22px}
+h1{font-size:clamp(1.9rem,6vw,2.6rem);font-weight:800;letter-spacing:-.025em;line-height:1.1;margin-bottom:10px}
+.lead{color:var(--suave);font-size:1.05rem;margin-bottom:32px}
+.paso{background:radial-gradient(70% 60% at 100% 100%,rgba(232,82,43,.10),transparent 70%),linear-gradient(180deg,#1A1B21,#141519);border:1px solid var(--borde);border-radius:24px;padding:24px;margin-bottom:16px}
+.num{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.12em;color:var(--naranja);border:1.5px solid var(--naranja);border-radius:8px;padding:.2em .55em;margin-bottom:10px}
+h2{font-size:1.2rem;font-weight:800;letter-spacing:-.015em;margin-bottom:6px}
+p{color:var(--suave)}
+.btn{display:inline-flex;align-items:center;justify-content:center;margin-top:16px;padding:.85em 1.5em;border-radius:999px;font-weight:700;font-size:.95rem;text-decoration:none;color:#fff;border:1px solid transparent}
+.btn-naranja{background:var(--naranja);box-shadow:0 8px 26px rgba(232,82,43,.32)}
+.btn-naranja:hover{background:var(--naranja-osc)}
+.btn-gris{background:var(--tarjeta-2);border-color:var(--borde)}
+.redes{display:flex;flex-wrap:wrap;gap:10px}
+.redes .btn{margin-top:14px}
+.pie{margin-top:28px;font-size:.88rem;color:var(--gris)}
+.pie a{color:var(--suave)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <img class="logo" src="/img/logo.png" alt="Hispana Percusión">
+  <div class="check">✓</div>
+  <h1 data-t="titulo">¡Gracias por tu compra!</h1>
+  <p class="lead" data-t="lead">Ya eres parte de Los Ritmos del Flamenco. Así empiezas:</p>
+
+  <section class="paso">
+    <span class="num">1</span>
+    <h2 data-t="p1t">Descarga tus 3 eBooks</h2>
+    <p data-t="p1">Te enviamos un email con el enlace de descarga. Si no lo ves, revisa la carpeta de spam o entra a tu área de cliente con el email que usaste al comprar.</p>
+    <a class="btn btn-naranja" href="https://polar.sh/hispana-percusion/portal" target="_blank" rel="noopener" data-t="p1b">Ir a mis descargas</a>
+  </section>
+
+  <section class="paso">
+    <span class="num">2</span>
+    <h2 data-t="p2t">Practica con HispanApp</h2>
+    <p data-t="p2">La app del método: reloj de compás, palmas reales y metrónomo para practicar cada ritmo del libro. Empieza gratis desde el móvil.</p>
+    <a class="btn btn-naranja" href="https://hispanapp.hispanapercusion.com/?instalar&utm_source=gracias" data-t="p2b">Abrir HispanApp gratis</a>
+  </section>
+
+  <section class="paso">
+    <span class="num">3</span>
+    <h2 data-t="p3t">Sigue aprendiendo</h2>
+    <p data-t="p3">Videos, ritmos y novedades en las redes de Hispana Percusión.</p>
+    <div class="redes">
+      <a class="btn btn-gris" href="https://instagram.com/hispanapercusion" target="_blank" rel="noopener">Instagram</a>
+      <a class="btn btn-gris" href="https://www.youtube.com/@hispanapercusion4568" target="_blank" rel="noopener">YouTube</a>
+      <a class="btn btn-gris" href="https://www.tiktok.com/@hispanapercusion" target="_blank" rel="noopener">TikTok</a>
+      <a class="btn btn-gris" href="https://www.patreon.com/HispanaPercusion" target="_blank" rel="noopener">Patreon</a>
+    </div>
+  </section>
+
+  <p class="pie"><span data-t="ayuda">¿Necesitas ayuda? Escríbenos a</span> <a href="mailto:info@hispanapercusion.com">info@hispanapercusion.com</a></p>
+</main>
+<script>
+(function(){
+  var T={
+  en:{titulo:"Thank you for your purchase!",lead:"You're now part of The Rhythms of Flamenco. Here's how to start:",p1t:"Download your 3 eBooks",p1:"We've sent you an email with the download link. If you can't find it, check your spam folder or sign in to your customer area with the email you used to buy.",p1b:"Go to my downloads",p2t:"Practice with HispanApp",p2:"The method's app: compás clock, real palmas and metronome to practice every rhythm in the book. Start for free on your phone.",p2b:"Open HispanApp for free",p3t:"Keep learning",p3:"Videos, rhythms and news on Hispana Percusión's social media.",ayuda:"Need help? Write to us at"},
+  pt:{titulo:"Obrigado pela sua compra!",lead:"Agora você faz parte de Os Ritmos do Flamenco. Veja como começar:",p1t:"Baixe seus 3 eBooks",p1:"Enviamos um e-mail com o link de download. Se não encontrar, confira a pasta de spam ou entre na sua área de cliente com o e-mail usado na compra.",p1b:"Ir para meus downloads",p2t:"Pratique com o HispanApp",p2:"O app do método: relógio de compás, palmas reais e metrônomo para praticar cada ritmo do livro. Comece grátis pelo celular.",p2b:"Abrir o HispanApp grátis",p3t:"Continue aprendendo",p3:"Vídeos, ritmos e novidades nas redes da Hispana Percusión.",ayuda:"Precisa de ajuda? Escreva para"},
+  fr:{titulo:"Merci pour votre achat !",lead:"Vous faites maintenant partie des Rythmes du Flamenco. Voici comment commencer :",p1t:"Téléchargez vos 3 eBooks",p1:"Nous vous avons envoyé un e-mail avec le lien de téléchargement. Si vous ne le trouvez pas, vérifiez vos spams ou connectez-vous à votre espace client avec l'e-mail utilisé pour l'achat.",p1b:"Accéder à mes téléchargements",p2t:"Pratiquez avec HispanApp",p2:"L'application de la méthode : horloge de compás, vraies palmas et métronome pour pratiquer chaque rythme du livre. Commencez gratuitement sur votre téléphone.",p2b:"Ouvrir HispanApp gratuitement",p3t:"Continuez à apprendre",p3:"Vidéos, rythmes et nouveautés sur les réseaux de Hispana Percusión.",ayuda:"Besoin d'aide ? Écrivez-nous à"},
+  de:{titulo:"Danke für deinen Kauf!",lead:"Du bist jetzt Teil von Die Rhythmen des Flamenco. So fängst du an:",p1t:"Lade deine 3 eBooks herunter",p1:"Wir haben dir eine E-Mail mit dem Download-Link geschickt. Falls du sie nicht findest, schau im Spam-Ordner nach oder melde dich mit deiner Kauf-E-Mail im Kundenbereich an.",p1b:"Zu meinen Downloads",p2t:"Übe mit HispanApp",p2:"Die App zur Methode: Compás-Uhr, echte Palmas und Metronom, um jeden Rhythmus aus dem Buch zu üben. Kostenlos auf dem Handy starten.",p2b:"HispanApp kostenlos öffnen",p3t:"Lerne weiter",p3:"Videos, Rhythmen und Neuigkeiten in den Netzwerken von Hispana Percusión.",ayuda:"Brauchst du Hilfe? Schreib uns an"},
+  it:{titulo:"Grazie per il tuo acquisto!",lead:"Ora fai parte de I Ritmi del Flamenco. Ecco come iniziare:",p1t:"Scarica i tuoi 3 eBook",p1:"Ti abbiamo inviato un'email con il link per il download. Se non la trovi, controlla lo spam o accedi alla tua area clienti con l'email usata per l'acquisto.",p1b:"Vai ai miei download",p2t:"Esercitati con HispanApp",p2:"L'app del metodo: orologio del compás, palmas reali e metronomo per esercitarti su ogni ritmo del libro. Inizia gratis dal telefono.",p2b:"Apri HispanApp gratis",p3t:"Continua a imparare",p3:"Video, ritmi e novità sui social di Hispana Percusión.",ayuda:"Hai bisogno di aiuto? Scrivici a"},
+  ru:{titulo:"Спасибо за покупку!",lead:"Теперь вы с нами — «Ритмы фламенко». Вот с чего начать:",p1t:"Скачайте 3 электронные книги",p1:"Мы отправили вам письмо со ссылкой для скачивания. Если его нет, проверьте папку «Спам» или войдите в личный кабинет с email, указанным при покупке.",p1b:"Перейти к загрузкам",p2t:"Практикуйтесь с HispanApp",p2:"Приложение к методу: часы компаса, настоящие пальмас и метроном для каждого ритма из книги. Начните бесплатно на телефоне.",p2b:"Открыть HispanApp бесплатно",p3t:"Продолжайте учиться",p3:"Видео, ритмы и новости в соцсетях Hispana Percusión.",ayuda:"Нужна помощь? Пишите на"},
+  zh:{titulo:"感谢您的购买！",lead:"欢迎加入《弗拉明戈节奏》。从这里开始：",p1t:"下载您的 3 本电子书",p1:"我们已向您发送包含下载链接的邮件。如果没有收到，请检查垃圾邮件，或使用购买时的邮箱登录客户中心。",p1b:"前往我的下载",p2t:"用 HispanApp 练习",p2:"教程配套 App：节拍时钟、真实拍手和节拍器，练习书中的每一种节奏。在手机上免费开始。",p2b:"免费打开 HispanApp",p3t:"继续学习",p3:"在 Hispana Percusión 的社交媒体上观看视频、节奏和最新动态。",ayuda:"需要帮助？请写信至"},
+  ja:{titulo:"ご購入ありがとうございます！",lead:"「フラメンコのリズム」へようこそ。まずはこちらから：",p1t:"3冊のeBookをダウンロード",p1:"ダウンロードリンク付きのメールをお送りしました。見つからない場合は迷惑メールフォルダを確認するか、購入時のメールアドレスでカスタマーページにログインしてください。",p1b:"ダウンロードページへ",p2t:"HispanAppで練習",p2:"メソッド専用アプリ：コンパス時計、本物のパルマ、メトロノームで本のすべてのリズムを練習できます。スマホで無料で始められます。",p2b:"HispanAppを無料で開く",p3t:"もっと学ぶ",p3:"Hispana PercusiónのSNSで動画やリズム、最新情報をチェック。",ayuda:"お困りですか？ご連絡はこちら："},
+  ko:{titulo:"구매해 주셔서 감사합니다!",lead:"『플라멩코의 리듬』에 오신 것을 환영합니다. 이렇게 시작하세요:",p1t:"eBook 3권 다운로드",p1:"다운로드 링크가 담긴 이메일을 보내드렸습니다. 보이지 않으면 스팸함을 확인하거나 구매 시 사용한 이메일로 고객 페이지에 로그인하세요.",p1b:"내 다운로드로 이동",p2t:"HispanApp으로 연습하기",p2:"메서드 전용 앱: 콤파스 시계, 실제 팔마, 메트로놈으로 책의 모든 리듬을 연습하세요. 휴대폰에서 무료로 시작할 수 있습니다.",p2b:"HispanApp 무료로 열기",p3t:"계속 배우기",p3:"Hispana Percusión SNS에서 영상, 리듬, 새 소식을 만나보세요.",ayuda:"도움이 필요하신가요? 연락처:"}
+  };
+  var q=new URLSearchParams(location.search).get('lang')||(navigator.language||'es');
+  var l=q.slice(0,2).toLowerCase(); var t=T[l]; if(!t) return;
+  document.documentElement.lang=l; document.title=t.titulo+' · Hispana Percusión';
+  document.querySelectorAll('[data-t]').forEach(function(e){var k=e.getAttribute('data-t'); if(t[k]) e.textContent=t[k];});})();
+</script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b710b4a28b444e0786d2416a0a091c61"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
