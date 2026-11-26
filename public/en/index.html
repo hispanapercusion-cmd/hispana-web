@@ -453,6 +453,22 @@ body.hoja-abierta{overflow:hidden}
 .idioma-pronto:hover{transform:none;border-color:var(--borde);color:var(--suave)}
 .pronto-nota{text-transform:none;letter-spacing:0;font-weight:500}
 @media (prefers-reduced-motion:reduce){.btn-naranja::after{animation:none!important}}
+/* Selector de idioma con banderas */
+.idiomas-top{display:flex;gap:6px;order:4}
+.idiomas-top a{display:flex;align-items:center;gap:7px;text-decoration:none;color:var(--suave);font-weight:700;font-size:.8rem;letter-spacing:.04em;padding:6px 10px;border-radius:999px;border:1px solid transparent}
+.idiomas-top a:hover{color:#fff;border-color:var(--borde)}
+.idiomas-top a[aria-current="true"]{color:#fff;background:var(--tarjeta);border-color:var(--borde)}
+.bandera{width:22px;height:15px;border-radius:3px;display:block;box-shadow:0 0 0 1px rgba(255,255,255,.18)}
+nav .menu{order:3;margin-left:auto}
+.hamb{order:5}
+@media (max-width:900px){.idiomas-top{order:2;margin-left:auto}.idiomas-top a{padding:6px 7px}.idiomas-top span{display:none}.bandera{width:26px;height:18px}}
+@media (max-width:900px){nav .marca b{white-space:nowrap}.idiomas-top{gap:2px}.idiomas-top a{padding:5px}nav .wrap{gap:8px}}
+@media (max-width:400px){nav .marca{gap:9px}nav .marca b{font-size:.95rem}.bandera{width:24px;height:16px}}
+@media (max-width:350px){nav .marca b span{display:none}}
+.aviso-idioma{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding:10px 16px;background:#1A1B21;border-bottom:1px solid var(--borde);font-size:.88rem;color:var(--suave);text-align:center}
+.aviso-idioma a{color:#fff;font-weight:700;display:inline-flex;align-items:center;gap:8px;text-decoration:none;background:var(--naranja);padding:6px 14px;border-radius:999px}
+.aviso-idioma button{background:none;border:0;color:var(--suave);font-size:1.2rem;cursor:pointer;line-height:1;padding:4px}
+.aviso-idioma[hidden]{display:none}
 </style>
 </head>
 <body>
@@ -465,6 +481,10 @@ body.hoja-abierta{overflow:hidden}
       <span class="tile"><img src="../img/logo.png" alt=""></span>
       <b>Hispana <span>Percusión</span></b>
     </a>
+    <div class="idiomas-top" role="navigation" aria-label="Language">
+      <a href="/" hreflang="es" lang="es" title="Español"><svg class="bandera" viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg><span>ES</span></a>
+      <a href="/en/" hreflang="en" lang="en" title="English" aria-current="true"><svg class="bandera" viewBox="0 0 60 40" aria-hidden="true"><clipPath id="ukc"><rect width="60" height="40"/></clipPath><g clip-path="url(#ukc)"><rect width="60" height="40" fill="#012169"/><path d="M0,0 60,40M60,0 0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 60,40M60,0 0,40" stroke="#C8102E" stroke-width="3"/><path d="M30,0V40M0,20H60" stroke="#fff" stroke-width="12"/><path d="M30,0V40M0,20H60" stroke="#C8102E" stroke-width="7"/></g></svg><span>EN</span></a>
+    </div>
     <button class="hamb" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
     <ul class="menu" id="menu">
       <li><a href="#funciones">HispanApp</a></li>
@@ -472,7 +492,6 @@ body.hoja-abierta{overflow:hidden}
       <li><a href="#cajones">Cajones</a></li>
       <li><a href="#patreon">Patreon</a></li>
       <li><a href="#sobre">About</a></li>
-      <li><a href="/" hreflang="es" lang="es" class="idioma-nav" title="Ver en español">ES</a></li>
       <li><a data-instalar href="https://hispanapp.hispanapercusion.com/" class="btn btn-naranja">Start free</a></li>
     </ul>
   </div>
