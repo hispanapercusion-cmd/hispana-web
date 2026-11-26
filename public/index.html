@@ -222,6 +222,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-ite
   .specs b{text-align:right}
   .taller img{height:120px}
 }
+.combo{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:18px;padding:16px 18px;border-radius:20px;background:var(--tarjeta-2);border:1px solid var(--borde)}
+.combo-txt{flex:1;min-width:200px}
+.combo-txt b{display:block;font-weight:700}
+.combo-txt small{color:var(--suave);font-size:.86rem}
+.combo .btn{padding:.7em 1.3em;font-size:.9rem}
 .idiomas-tit{margin-top:26px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--gris)}
 .idiomas{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .idioma{display:inline-flex;align-items:center;padding:.5em 1em;border-radius:999px;background:var(--fondo);border:1px solid var(--borde);font-size:.86rem;font-weight:600;color:var(--suave);text-decoration:none;transition:border-color .15s,color .15s}
@@ -626,6 +631,10 @@ nav .menu{order:3;margin-left:auto}
           <li><span class="txt"><small>eBook III · Ritmos en 4/4 y 6/8</small><b>Tangos · Rumbas · Tientos · Tanguillos</b></span></li>
         </ul>
         <a href="https://buy.polar.sh/polar_cl_07edvA7aQWmvePFyX5snNynGdxrVyfQclEplo3QB2Cp" class="btn btn-naranja btn-grande" target="_blank" rel="noopener">Comprar el método completo</a>
+        <div class="combo">
+          <span class="combo-txt"><b>Combo: método + HispanApp PRO</b><small id="combo-precio"><b class="naranja">109,90 USD</b> · por separado 124,89</small></span>
+          <a href="https://buy.polar.sh/polar_cl_padndTAQEr074Ks6SFEVgCQwSakz4Hu3Gj56X4Fi53h" class="btn btn-gris" target="_blank" rel="noopener">Comprar el combo</a>
+        </div>
         <p class="idiomas-tit">Disponible en</p>
         <div class="idiomas escalona">
           <a href="https://buy.polar.sh/polar_cl_07edvA7aQWmvePFyX5snNynGdxrVyfQclEplo3QB2Cp" hreflang="es" class="idioma idioma-ok" target="_blank" rel="noopener">Español</a>
@@ -918,6 +927,7 @@ document.documentElement.classList.add('js');
      pasan a los links «Navidad 40%» de Polar y cuenta los días; después vuelve todo a la normalidad */
   (function(){
     var NAVIDAD={
+      'polar_cl_padndTAQEr074Ks6SFEVgCQwSakz4Hu3Gj56X4Fi53h':'polar_cl_w0Ul6SEXy5CtA0w1Ho23faLtRqycRiWuMhMGi3X0wJ0',
       'polar_cl_3r6SACAjkFbKaOOz2VOxPNQr4Dsc5hQMWeoKF3JEOkd':'polar_cl_nEgfGW7LpHGEGtPiyr8k4L2mYxX6aISX9UjNL1xolkR',
       'polar_cl_07edvA7aQWmvePFyX5snNynGdxrVyfQclEplo3QB2Cp':'polar_cl_LrOqcKdCa5DzVQybrZphHIBU73vZqgVm71PW24117lE',
       'polar_cl_lQaF5zQalYUW89kdwtzgyIG9P52RZcwUcc6Te2bisvP':'polar_cl_j3jGx3eVBWWMiOQnpJB7582KzNs2y0I3eto4E1849u8',
@@ -934,6 +944,7 @@ document.documentElement.classList.add('js');
     var pm=document.getElementById('promo-metodo'),pp=document.getElementById('pro-precio');
     if(ahora>=fin){if(el)el.hidden=true;if(pm)pm.hidden=true;if(pp)pp.textContent='24,99 USD';var pl=document.getElementById('plan-precio');if(pl)pl.innerHTML='24,99 <small>USD</small>';var pn=document.getElementById('plan-nota');if(pn)pn.textContent='Pago único';return}
     if(ahora<ini){if(sub)sub.textContent='Desde el 1 de diciembre';return}
+    var cp=document.getElementById('combo-precio');if(cp)cp.innerHTML='<b class="naranja">69,99 USD</b> <s>109,90</s> · 40% de Navidad';
     document.querySelectorAll('a[href*="buy.polar.sh/"]').forEach(function(a){
       var id=a.getAttribute('href').split('/').pop();if(NAVIDAD[id])a.href='https://buy.polar.sh/'+NAVIDAD[id]});
     var d=Math.ceil((fin-ahora)/864e5),cuenta=d<=1?'Último día':'Solo en diciembre · quedan '+d+' días';
